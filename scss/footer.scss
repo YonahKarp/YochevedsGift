@@ -1,0 +1,134 @@
+#footer{
+    background: $colorGrey;
+    min-height: 300px;
+    padding: 15px 5%;
+    margin-top: 15px;
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+
+    #contactUs{
+        position: absolute;
+        right: 0;
+        top: 10%;
+        transform: translateX(300px);
+        transition: transform .7s ease-in-out;
+
+        &.open{
+            transform: translateX(-0px);
+        }
+
+        .slideOutBtn{
+            position: absolute;
+            right: 300px;
+            transform: rotate(270deg);
+            transform-origin: 100% 100%;
+            white-space: nowrap;
+
+            background: $colorPurple;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        .contactFormContainer{
+            position: relative;
+            width: 300px;
+            min-height: 250px;
+            background: $colorPurple;
+            padding: 15px;
+
+            .form{
+                
+                input, textarea, select{
+                    width: 90%;
+                    margin: 0 auto 10px;
+                    text-indent: 15px;
+                    border-bottom: 1px solid #ddd;
+                    color: $colorGrey;
+                    border-radius: 5px;
+                    background: transparent;
+                    font: 16px Arial, Helvetica, sans-serif;
+                    height: 35px;
+                }
+        
+                input[type=number]::-webkit-inner-spin-button, 
+                input[type=number]::-webkit-outer-spin-button { 
+                    -webkit-appearance: none; 
+                    margin: 0; 
+                }
+        
+                .attention:invalid{
+                    background-color: $colorPink;
+                }
+        
+                input[required], textarea[required]{
+                    ~ span{
+                        display: none
+                    }
+        
+                    &:invalid ~ span{
+                        display: inline;
+                        color: rgb(221, 58, 58);
+                        padding-left: 10px;
+                        vertical-align: top;
+                    }
+                }
+        
+                textarea{
+                    resize: none;
+                    height: 50px
+                }
+        
+                .btnContainer{
+                    height: 40px;
+                    width: 90%;
+                  }
+                  
+                  .rplButton{
+                    color:$colorGrey;
+                    background-color: $colorBlue;
+                    font-size: 14pt;
+                    text-align: center;
+                    line-height: 40px;
+                    cursor: pointer;
+
+                    &:active{
+                        background-color: $colorGreen;
+                    }
+                  }
+            }
+        }
+    }
+
+    .footerContent{
+        columns: 3 200px;
+        column-gap: 5vw;
+        column-rule: 1px dotted whitesmoke;
+
+        .column{
+            break-inside: avoid;
+        }
+
+        a{
+            color: white;
+            padding: 10px 0;
+            display: table;
+            width: 175px;
+
+            text-decoration: none;
+        
+        }
+
+        a.footerTitle{
+            padding-top: 30px;
+            text-transform: uppercase;
+            box-sizing: border-box;
+            border-bottom: 2px solid $colorPurple;
+            @extend %fontSm;
+        }
+
+        a.footerLink{
+            @extend %fontFine;
+        }
+    }
+}

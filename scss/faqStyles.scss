@@ -1,0 +1,97 @@
+@import "./constants";
+
+body{
+    //background: linear-gradient($colorGreen, $colorYellow) fixed;
+    background: $colorGreen;
+}
+
+.faqContainer{
+    margin-top: 150px;
+    font-weight: 300;
+
+    h2.pageTitle{
+        color: white;
+        text-align: center;
+        text-shadow: 2px 2px rgba(17, 17, 17, 0.5);
+        @extend %fontH2;
+    }
+}
+
+.card{
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 2vw 2vw 1vw rgba(17, 17, 17, 0.5);
+    padding: 15px 30px;
+    background: white;
+    cursor: pointer;
+
+    transition: margin .2s;
+
+
+    h2{
+        margin: 0;
+    }
+    
+    .plus{
+        @extend %fontH2;
+        float: left;
+        padding-right: 15px;
+        position: relative;
+        top: 15px;
+        
+
+        &::before{
+            content: "";
+            height: 5px;
+            width: 25px;
+            display: block;
+            background: black;
+        }
+
+
+
+        &::after{
+            content: "";
+            display: block;
+            height: 25px;
+            width: 5px;
+            background: black;
+            position: relative;
+            left: 10px;
+            top: -15px;
+            transition: transform .2s;
+
+        }
+    }
+
+    &:last-child{
+        padding-bottom: 45px
+    }
+
+    &:first-child{
+        padding-top: 45px
+    }
+
+    p{
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .2s;
+
+    }
+
+    &.shown{
+        margin: 45px auto;
+        transition: margin .5s;
+
+        .plus:after{
+            transform: rotate(90deg);
+        }
+
+        p{
+            max-height: 500px;
+            transition: max-height .5s;
+        }
+    }
+}
+

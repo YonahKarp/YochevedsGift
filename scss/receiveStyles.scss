@@ -1,0 +1,30 @@
+@import "./constants";
+
+body{
+    background: $colorYellow;
+}
+
+.receiveContainer{
+    margin-top: 150px;
+    font-weight: 300;
+    margin-bottom: 45px;
+
+    h2.pageTitle{
+        color: white;
+        text-align: center;
+        text-shadow: 2px 2px rgba(17, 17, 17, 0.5);
+        @extend %fontH2;
+    }
+}
+
+.card{
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 2vw 2vw 1vw rgba(17, 17, 17, 0.5);
+    padding: 15px 30px;
+    background: white;
+    cursor: pointer;
+}
+
+

@@ -1,0 +1,67 @@
+.faqContainer h2.pageTitle, .card .plus {
+  font-size: 35pt; }
+
+/* adjust fonts */
+@media only screen and (max-width: 450px) {
+  .faqContainer h2.pageTitle, .card .plus {
+    font-size: 10vw; } }
+
+body {
+  background: #d6fbe4; }
+
+.faqContainer {
+  margin-top: 150px;
+  font-weight: 300; }
+  .faqContainer h2.pageTitle {
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px rgba(17, 17, 17, 0.5); }
+
+.card {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 2vw 2vw 1vw rgba(17, 17, 17, 0.5);
+  padding: 15px 30px;
+  background: white;
+  cursor: pointer;
+  transition: margin .2s; }
+  .card h2 {
+    margin: 0; }
+  .card .plus {
+    float: left;
+    padding-right: 15px;
+    position: relative;
+    top: 15px; }
+    .card .plus::before {
+      content: "";
+      height: 5px;
+      width: 25px;
+      display: block;
+      background: black; }
+    .card .plus::after {
+      content: "";
+      display: block;
+      height: 25px;
+      width: 5px;
+      background: black;
+      position: relative;
+      left: 10px;
+      top: -15px;
+      transition: transform .2s; }
+  .card:last-child {
+    padding-bottom: 45px; }
+  .card:first-child {
+    padding-top: 45px; }
+  .card p {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .2s; }
+  .card.shown {
+    margin: 45px auto;
+    transition: margin .5s; }
+    .card.shown .plus:after {
+      transform: rotate(90deg); }
+    .card.shown p {
+      max-height: 500px;
+      transition: max-height .5s; }

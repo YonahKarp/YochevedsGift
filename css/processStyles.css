@@ -1,0 +1,35 @@
+.processContainer h2.pageTitle {
+  font-size: 35pt; }
+
+/* adjust fonts */
+@media only screen and (max-width: 450px) {
+  .processContainer h2.pageTitle {
+    font-size: 10vw; } }
+
+body {
+  background: #b1b1ec; }
+
+.processContainer {
+  margin-top: 150px;
+  font-weight: 300; }
+  .processContainer h2.pageTitle {
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px rgba(17, 17, 17, 0.5); }
+  .processContainer .card {
+    width: 90%;
+    display: block;
+    margin: 45px auto;
+    box-shadow: 10px 10px 5px rgba(17, 17, 17, 0.5);
+    padding: 30px;
+    background: white;
+    position: relative;
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+    -webkit-font-smoothing: subpixel-antialiased; }
+    .processContainer .card h2 {
+      margin: 0; }
+    .processContainer .card.beforeAnimated {
+      transform: translateY(100px);
+      opacity: 0; }

@@ -1,0 +1,202 @@
+#header{
+    min-height: 700px;
+    color: white;
+    position: relative;
+
+    .menu{
+        display: none;
+    }
+
+    .headerContent{
+        min-height: 700px;
+        background: rgba(17, 17, 17, 0.3); //don't support gradient
+        background: linear-gradient(rgba(17, 17, 17, 0.3), rgba(17, 17, 17, 0.6));
+        position: relative;
+        overflow: hidden;
+    }
+
+    .logo{
+        width: 15%;
+        min-width: 80px;
+        max-width: 120px;;
+        position: absolute;
+        left: 3%;
+        top: 30px;
+        background: white;
+        border-radius: 20px;
+    }
+
+    .links{
+        height: 100px;
+        margin-left: calc(120px + 3%);
+        ul{
+            margin: 0; 
+            height: 100%;
+            padding: 0;
+
+            li{
+                display: inline-block;
+                width: 20%;
+                text-align: center;
+                vertical-align: top;
+                padding: 30px 0;
+                box-sizing: border-box;
+                cursor: pointer;
+
+                a{@extend %fontStnd;}
+            }
+    
+            li:hover{
+                background: rgba(0,0,0, 0.5);
+                border-bottom: $colorPurple 2px solid;
+            }
+        }
+    }
+
+    .slideContent{
+        width: 91%;
+        min-height: 220px;
+        display: none;
+        text-align: center;
+        opacity: 0;
+
+        &.active{
+            opacity: 1;
+            display: block;
+            animation: fadeIn 1s ease-in-out;
+            -webkit-animation: fadeIn 1s ease-in-out;
+        }
+
+        > div{
+            display: inline-block;
+            text-align: left;
+        }
+
+        .tagLine{
+            position: absolute;
+            top: calc(100px + 6%);
+            left: 6%;
+        }
+
+        .question{
+            @extend %fontStnd;
+            width: 56%;            
+            padding: 8px 0 0 20px;
+            vertical-align: top;
+            font-style: italic;
+
+            position: absolute;
+            bottom: 15%;
+            right: 6%;
+        }  
+
+        h2{
+            @extend %fontH2;
+            font-weight: bold;
+            margin: 0;
+            // font-family: 'Dancing Script', cursive;
+
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+
+    @media only screen and (max-width: 900px) {
+        %fontH2{font-size: 28pt;}
+    }
+
+    @media only screen and (max-width: 740px) {
+        .menu{
+            display: block;
+            position: absolute;
+            right: 20px;
+            margin: 20px;
+            top: 3%;
+            transition: right 1s ease-in-out;
+            z-index: 20;
+
+            > span{
+                display: block;
+                width: 32px;
+                height: 4px;
+                margin-top: 6px;
+                background: #fff;
+                transition: .3s ease-in-out;
+                box-shadow: 2px 2px rgba(17, 17, 17, 0.5);
+            }
+            
+            &.open{
+                position: fixed;
+                right: 70%;
+                transform: rotate(-45deg);
+
+                > span:nth-child(1) {
+                    -webkit-transform: translateY(7px);
+                    -ms-transform: translateY(7px);
+                    transform: translateY(7px);
+                }
+
+                > span:nth-child(2) {opacity: 0;}
+
+                > span:nth-child(3) {
+                    -webkit-transform: rotate(-90deg) translateX(13px);
+                    -ms-transform: rotate(-90deg) translateX(13px);
+                    transform: rotate(-90deg) translateX(13px);
+                }   
+            }
+        }
+
+        .links{
+            ul{
+                position: fixed;
+                display: inline-block;
+                right: -550px;
+                margin: 0;
+                padding: 0;
+                background: rgba(25, 25,25, 0.9);
+                width: 70%;
+                height: 100%;
+                z-index: 111;
+                transition: ease-in-out right 1s;
+
+                li{
+                    display: block;
+                    padding: 15px 30px;
+                    width: 100%;
+                    text-align: right;
+                    border-bottom: 1px grey solid;
+                }
+            }
+        }
+
+        .slideContent{
+            min-height: 400px;
+            text-align: unset;
+            .question{
+                width: 94%;
+            }
+        }
+    }
+}
+
+#header.header2{
+    min-height: unset;
+    background: white;
+    color: $colorGrey !important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 10px 10px 5px rgba(17, 17, 17, 0.5);
+
+
+    .menu > span{
+        background: $colorGrey;
+        transition: .3s ease-in-out;
+    }
+
+    @media only screen and (min-width: 741px) {
+        a.unStyle{
+            color: $colorGrey;
+        }
+    }
+}
