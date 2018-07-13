@@ -4,7 +4,7 @@ $(document).ready(function(){
     var slideContent = $('.slideContent');
 
     //slideshow
-    //var blurInterval = setInterval(runBlurAnimation, 8000);
+    var blurInterval = setInterval(runBlurAnimation, 8000);
     var index = 1;
     var flag = true;
     var blur1 = $("#blur1");
@@ -30,9 +30,9 @@ $(document).ready(function(){
 
     selectButtons.click(function(){
         index = $(this).index();
-        //clearInterval(blurInterval);
+        clearInterval(blurInterval);
         runBlurAnimation();
-        //blurInterval = setInterval(runBlurAnimation, 8000);
+        blurInterval = setInterval(runBlurAnimation, 8000);
     });
 
     //collapsed links
@@ -117,7 +117,7 @@ $(document).ready(function(){
         $(this).parent().toggleClass("open");
     })
 
-    $("[href=#contact]").click(function(e){
+    $("[href=#contact]").click(function(e){ //todo fix click
         $("#contactUs").addClass("open");
 
 
