@@ -12,6 +12,7 @@ html{
 }
 
 .body{
+    background: whitesmoke;
 }
 
 .right{
@@ -41,6 +42,12 @@ body {margin:0;}
     @extend %fontH2;
     font-weight: 700;
 }    
+
+
+.anchor{
+    position: absolute;
+    top: -220px;
+}
 
 .blur{
     transition: opacity 1s ease-in-out;
@@ -91,8 +98,8 @@ body {margin:0;}
     margin-top: 10px;
     display: table;
     text-decoration: unset;
+    cursor: pointer;
     color: $colorGrey;
-
 
 }
 
@@ -100,7 +107,6 @@ body {margin:0;}
 .table-cell{display: table-cell}
 
 .homeContent{
-    background: whitesmoke;
     color: $colorGrey;
     font-family: 'Raleway', Arial, sans-serif;
 
@@ -109,14 +115,27 @@ body {margin:0;}
     }
 
     .text{
-        width: 60%;
-        padding: 60px 10% 60px 10%;
         @extend %fontMore;
         background: $colorPurple;
+        width: calc(60% - 35px);
+        box-shadow: 10px 10px 5px rgba(17, 17, 17, 0.5);
+        display: inline-block;
+        vertical-align: top;
+        box-sizing: border-box;
+
+        margin: 30px 15px 30px 20px;
+        padding: 60px 10% 60px 10%;
     }
 
     .callout{
         background: $colorBlue;
+        width: calc(40% - 35px);
+        box-shadow: 10px 10px 5px rgba(17, 17, 17, 0.5);
+
+        display: inline-block;
+        box-sizing: border-box;
+        margin: 30px 20px 30px 15px;
+
 
 
         div{
@@ -129,6 +148,14 @@ body {margin:0;}
             padding: 5px 7% 30px 7%;
 
         }
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    .homeContent .text, .homeContent .callout{
+        width: 90%;
+        display: block;
+        margin: 30px auto;
     }
 }
 

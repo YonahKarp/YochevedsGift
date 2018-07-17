@@ -38,7 +38,8 @@ body {
       height: 5px;
       width: 25px;
       display: block;
-      background: black; }
+      background: black;
+      transition: transform .2s; }
     .card .plus::after {
       content: "";
       display: block;
@@ -62,6 +63,8 @@ body {
     transition: margin .5s; }
     .card.shown .plus:after {
       transform: rotate(90deg); }
+    .card.shown .plus:before {
+      transform: rotate(180deg); }
     .card.shown p {
       max-height: 500px;
       transition: max-height .5s; }

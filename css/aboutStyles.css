@@ -8,6 +8,10 @@
   font-size: 35pt; }
 
 /* adjust fonts */
+@media only screen and (max-width: 620px) {
+  .aboutContainer {
+    font-size: 12pt; } }
+
 @media only screen and (max-width: 450px) {
   .aboutContainer h2.pageTitle, .aboutContainer .aboutContent .snippet .quote {
     font-size: 10vw; }
@@ -64,6 +68,9 @@ body {
     .aboutContainer .aboutContent h2 {
       text-align: center;
       color: #b1b1ec; }
+    .aboutContainer .aboutContent a {
+      color: #9d9dce;
+      text-decoration: none; }
     .aboutContainer .aboutContent p {
       position: relative;
       transform: translateY(0);

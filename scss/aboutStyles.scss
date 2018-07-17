@@ -21,7 +21,6 @@ body{
     }
 
 
-
     .aboutContent{
         // background: white;
         min-height: 1200px;
@@ -78,6 +77,11 @@ body{
             text-align: center;
             color: $colorPurple;
             // font-family: 'Raleway', Arial, sans-serif;
+        }
+        
+        a{
+            color: $colorDarkPurple;
+            text-decoration: none;
         }
 
         p{

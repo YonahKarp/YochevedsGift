@@ -1,13 +1,29 @@
+#donateNow {
+  font-size: 15pt; }
+
 .processContainer h2.pageTitle {
   font-size: 35pt; }
 
 /* adjust fonts */
 @media only screen and (max-width: 450px) {
   .processContainer h2.pageTitle {
-    font-size: 10vw; } }
+    font-size: 10vw; }
+  #donateNow {
+    font-size: 3.5vw; } }
 
 body {
   background: #b1b1ec; }
+
+#donateNow {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  background: #ffdbdb;
+  z-index: 100;
+  box-shadow: 10px 10px 5px rgba(17, 17, 17, 0.5);
+  padding: 20px; }
+  #donateNow.hidden {
+    display: none; }
 
 .processContainer {
   margin-top: 150px;

@@ -4,7 +4,23 @@ body{
     background: $colorPurple;
 }
 
-.processContainer{
+#donateNow{
+    @extend %fontSm;
+
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    background: $colorPink;
+    z-index: 100;
+    box-shadow: 10px 10px 5px rgba(17, 17, 17, 0.5);
+    padding: 20px;
+
+    &.hidden{
+        display: none;
+    }
+}
+
+.donateContainer{
     margin-top: 150px;
     font-weight: 300;
 
@@ -27,6 +43,10 @@ body{
             margin: 0;
         }
 
+        a{
+            color: $colorDarkPurple;
+            text-decoration: none;
+        }
     
         position: relative;
         transform: translateY(0);

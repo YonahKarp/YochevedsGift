@@ -1,4 +1,4 @@
-#footer .footerContent a.footerTitle {
+#footer .footerContent a.footerTitle, .form .floating-label {
   font-size: 15pt; }
 
 #header .links ul li a, #header .slideContent .question, html {
@@ -14,10 +14,14 @@
   font-size: 10pt; }
 
 /* adjust fonts */
+@media only screen and (max-width: 620px) {
+  #footer .footerContent a.footerTitle, .form .floating-label {
+    font-size: 12pt; } }
+
 @media only screen and (max-width: 450px) {
   #header .slideContent h2, .emphasis {
     font-size: 10vw; }
-  #footer .footerContent a.footerTitle {
+  #footer .footerContent a.footerTitle, .form .floating-label {
     font-size: 3.5vw; }
   #footer .footerContent a.footerLink, .homeContent .callout .finePrint {
     font-size: 8pt; }
@@ -37,14 +41,14 @@
     background: rgba(17, 17, 17, 0.3);
     background: linear-gradient(rgba(17, 17, 17, 0.3), rgba(17, 17, 17, 0.6));
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    box-shadow: 10px 10px 5px rgba(17, 17, 17, 0.5); }
   #header .logo {
-    width: 15%;
     min-width: 80px;
-    max-width: 120px;
+    max-width: 100px;
     position: absolute;
     left: 3%;
-    top: 30px;
+    top: 5px;
     background: white;
     border-radius: 20px; }
   #header .links {
@@ -57,12 +61,15 @@
       #header .links ul li {
         display: inline-block;
         width: 20%;
-        text-align: center;
-        vertical-align: top;
-        padding: 30px 0;
-        box-sizing: border-box;
-        cursor: pointer; }
-      #header .links ul li:hover {
+        height: 100%; }
+        #header .links ul li a {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          vertical-align: top;
+          padding: 30px 0; }
+      #header .links ul a:hover {
         background: rgba(0, 0, 0, 0.5);
         border-bottom: #b1b1ec 2px solid; }
   #header .slideContent {
@@ -141,11 +148,12 @@
       z-index: 111;
       transition: ease-in-out right 1s; }
       #header .links ul li {
-        display: block;
-        padding: 15px 30px;
         width: 100%;
-        text-align: right;
-        border-bottom: 1px grey solid; }
+        height: unset; }
+        #header .links ul li a {
+          padding: 15px 30px;
+          text-align: right;
+          border-bottom: 2px grey solid; }
     #header .slideContent {
       min-height: 400px;
       text-align: unset; }
@@ -181,7 +189,7 @@
     right: 0;
     top: 10%;
     transform: translateX(300px);
-    transition: transform .7s ease-in-out; }
+    transition: transform .8s ease-in-out; }
     #footer #contactUs.open {
       transform: translateX(0px); }
     #footer #contactUs .slideOutBtn {
@@ -199,44 +207,6 @@
       min-height: 250px;
       background: #b1b1ec;
       padding: 15px; }
-      #footer #contactUs .contactFormContainer .form input, #footer #contactUs .contactFormContainer .form textarea, #footer #contactUs .contactFormContainer .form select {
-        width: 90%;
-        margin: 0 auto 10px;
-        text-indent: 15px;
-        border-bottom: 1px solid #ddd;
-        color: #373737;
-        border-radius: 5px;
-        background: transparent;
-        font: 16px Arial, Helvetica, sans-serif;
-        height: 35px; }
-      #footer #contactUs .contactFormContainer .form input[type=number]::-webkit-inner-spin-button,
-      #footer #contactUs .contactFormContainer .form input[type=number]::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0; }
-      #footer #contactUs .contactFormContainer .form .attention:invalid {
-        background-color: #ffdbdb; }
-      #footer #contactUs .contactFormContainer .form input[required] ~ span, #footer #contactUs .contactFormContainer .form textarea[required] ~ span {
-        display: none; }
-      #footer #contactUs .contactFormContainer .form input[required]:invalid ~ span, #footer #contactUs .contactFormContainer .form textarea[required]:invalid ~ span {
-        display: inline;
-        color: #dd3a3a;
-        padding-left: 10px;
-        vertical-align: top; }
-      #footer #contactUs .contactFormContainer .form textarea {
-        resize: none;
-        height: 50px; }
-      #footer #contactUs .contactFormContainer .form .btnContainer {
-        height: 40px;
-        width: 90%; }
-      #footer #contactUs .contactFormContainer .form .rplButton {
-        color: #373737;
-        background-color: #cff1fb;
-        font-size: 14pt;
-        text-align: center;
-        line-height: 40px;
-        cursor: pointer; }
-        #footer #contactUs .contactFormContainer .form .rplButton:active {
-          background-color: #d6fbe4; }
   #footer .footerContent {
     columns: 3 200px;
     column-gap: 5vw;
@@ -255,12 +225,101 @@
       box-sizing: border-box;
       border-bottom: 2px solid #b1b1ec; }
 
+.form {
+  font-size: 16px; }
+  .form input:not([type="radio"]):not([type="checkbox"]), .form textarea, .form select {
+    width: 90%;
+    margin: 0 auto 10px;
+    text-indent: 15px;
+    border-bottom: 1px solid #ddd;
+    color: #373737;
+    border-radius: 5px;
+    background: transparent;
+    font: 16px Arial, Helvetica, sans-serif;
+    height: 35px; }
+  .form input[type=radio], .form input[type=checkbox] {
+    margin-bottom: 10px;
+    display: inline-block; }
+    .form input[type=radio]:checked, .form input[type=checkbox]:checked {
+      padding-bottom: 50px; }
+      .form input[type=radio]:checked ~ .hiddenField, .form input[type=checkbox]:checked ~ .hiddenField {
+        max-height: 100px;
+        opacity: 1;
+        pointer-events: unset; }
+      .form input[type=radio]:checked .shownField, .form input[type=checkbox]:checked .shownField {
+        max-height: 0px;
+        opacity: 0;
+        pointer-events: none; }
+  .form .shownField {
+    max-height: 100px;
+    opacity: 1;
+    transition: max-height .7s ease-in-out, opacity .7s ease-in-out; }
+  .form .hiddenField {
+    max-height: 0px;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height .7s ease-in-out, opacity .7s ease-in-out; }
+  .form input[type=number]::-webkit-inner-spin-button,
+  .form input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }
+  .form .attention:invalid {
+    background-color: #dd3a3a !important; }
+    .form .attention:invalid ~ .floating-label {
+      background-color: #dd3a3a !important;
+      color: white; }
+    .form .attention:invalid ~ label {
+      color: #dd3a3a !important; }
+  .form input[required] ~ span, .form textarea[required] ~ span {
+    display: none; }
+  .form input[required]:invalid ~ span, .form textarea[required]:invalid ~ span {
+    display: inline;
+    color: #dd3a3a;
+    padding-left: 10px;
+    vertical-align: top; }
+  .form textarea {
+    resize: none;
+    height: 50px; }
+  .form .btnContainer {
+    height: 40px;
+    width: 90%;
+    display: inline-block; }
+  .form .rplButton {
+    color: #373737;
+    background-color: #cff1fb;
+    font-size: 14pt;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer; }
+    .form .rplButton:active {
+      background-color: #d6fbe4; }
+  .form .inputContainer {
+    position: relative;
+    margin-bottom: 5px; }
+  .form input:focus ~ .floating-label,
+  .form input:not(:focus):valid ~ .floating-label {
+    top: -5px;
+    font-size: 10px;
+    opacity: 1;
+    padding: 0 5px; }
+  .form .floating-label {
+    position: absolute;
+    display: inline-block;
+    color: #777;
+    pointer-events: none;
+    left: 20px;
+    top: 7px;
+    transition: 0.2s ease top, 0.2s ease font-size; }
+
 * {
   box-sizing: border-box; }
 
 html {
   height: 100%;
   font-family: 'Montserrat', sans-serif; }
+
+.body {
+  background: whitesmoke; }
 
 .right {
   float: right;
@@ -290,6 +349,10 @@ body {
   color: #ffdbdb;
   text-shadow: 6px 6px rgba(17, 17, 17, 0.5);
   font-weight: 700; }
+
+.anchor {
+  position: absolute;
+  top: -220px; }
 
 .blur {
   transition: opacity 1s ease-in-out;
@@ -332,6 +395,7 @@ body {
   margin-top: 10px;
   display: table;
   text-decoration: unset;
+  cursor: pointer;
   color: #373737; }
 
 .table {
@@ -341,27 +405,42 @@ body {
   display: table-cell; }
 
 .homeContent {
-  background: whitesmoke;
   color: #373737;
   font-family: 'Raleway', Arial, sans-serif; }
   .homeContent .table-cell {
     vertical-align: middle; }
   .homeContent .text {
-    width: 60%;
-    padding: 60px 10% 60px 10%;
-    background: #b1b1ec; }
+    background: #b1b1ec;
+    width: calc(60% - 35px);
+    box-shadow: 10px 10px 5px rgba(17, 17, 17, 0.5);
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    margin: 30px 15px 30px 20px;
+    padding: 60px 10% 60px 10%; }
   .homeContent .callout {
-    background: #cff1fb; }
+    background: #cff1fb;
+    width: calc(40% - 35px);
+    box-shadow: 10px 10px 5px rgba(17, 17, 17, 0.5);
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 30px 20px 30px 15px; }
     .homeContent .callout div {
       padding: 30px 7% 30px 7%;
       background: #ffdbdb; }
     .homeContent .callout .finePrint {
       padding: 5px 7% 30px 7%; }
 
+@media only screen and (max-width: 740px) {
+  .homeContent .text, .homeContent .callout {
+    width: 90%;
+    display: block;
+    margin: 30px auto; } }
+
 @media only screen and (max-width: 450px) {
   #header .slideContent h2, .emphasis {
     font-size: 10vw; }
-  #footer .footerContent a.footerTitle {
+  #footer .footerContent a.footerTitle, .form .floating-label {
     font-size: 3.5vw; }
   #footer .footerContent a.footerLink, .homeContent .callout .finePrint {
     font-size: 8pt; }

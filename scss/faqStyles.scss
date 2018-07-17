@@ -47,6 +47,8 @@ body{
             width: 25px;
             display: block;
             background: black;
+            transition: transform .2s;
+
         }
 
 
@@ -86,6 +88,9 @@ body{
 
         .plus:after{
             transform: rotate(90deg);
+        }
+        .plus:before{
+            transform: rotate(180deg);
         }
 
         p{

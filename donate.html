@@ -7,7 +7,7 @@
    
   <!-- <link rel="icon" type="image/png" href="./icon.png"> -->
   <link rel="stylesheet" href="./css/styles.css">
-  <link rel="stylesheet" href="./css/processStyles.css">
+  <link rel="stylesheet" href="./css/donateStyles.css">
 
   <!-- <link type="text/css" rel="stylesheet" href="css/lightslider.css" />                   -->
 </head>
@@ -17,7 +17,7 @@
         <div class="links">
             <ul>
                 <li><a class="unStyle" href ="./about.html">About Us</a></li><li>
-                    <a class="unStyle" href ="./process.html">Process</a></li><li>
+                    <a class="unStyle" href ="./donate.html">Donate</a></li><li>
                     <a class="unStyle" href ="./faqs.html">FAQs</a></li><li>
                     <a class="unStyle" href ="./receive.html">Receive Milk</a></li><li>
                     <a class="unStyle" href ="#contact" >Contact Us</a></li>
@@ -31,11 +31,15 @@
         </div>
         <a href="./index.html"><img class="logo" src = "./img/logo.png" alt="Yocheved's Gift logo"/></a>
     </div>
-    <div class="processContainer">
-        <h2 class="pageTitle dancingScript">Donation Process</h2>
+    <a id="donateNow" href="./donateNow.html" class="button cta">
+        Donate now!  ►
+    </a>
+    <div class="donateContainer">
+        <h2 class="pageTitle dancingScript">Donate Milk</h2>
         <div class="clearFix"></div>
-        <div class="processContent openSans">
-            <div id="#whyDonate" class="card">
+        <div class="donateContent openSans">
+            <div  class="card">
+                <span id="whyDonate" class="anchor" ></span>
                 <h2 class="dancingScript">Why Donate?</h2>
                 <p class="centerTxt">
                     If you’re fortunate to have a surplus supply of milk,
@@ -43,14 +47,17 @@
                 </p>
             </div>
             <div class="card">
-                <h2 id="#eligible" class="dancingScript">Am I Eligible?</h2>
+                <span id="eligible" class="anchor" ></span>
+                <h2 class="dancingScript">Am I Eligible?</h2>
                 <p class="centerTxt">
                     You’re likely to qualify if you have more milk than your baby needs
                     and are generally in good health, don’t smoke, and use approved medications. 
                 </p>
             </div>
             <div class="card">
-                <h2 id="#donorProcess" class="dancingScript">Donor Process</h2>
+                <span id="donorProcess" class="anchor" ></span>
+
+                <h2 class="dancingScript">Donor Process</h2>
                 <h4>There are four steps to becoming a milk donor:</h4>
                 <ol>
                     <li>A 20-minute screening phone call</li>
@@ -61,12 +68,15 @@
                 <h4>The donor set-up process takes 2 - 3 weeks to complete</h4>
                 <h4>Approved donors can provide milk up to 6 months old if it was properly stored.</h4>
                  <div>
-                        <b>Ready to start?</b> Click here and complete this short form (See Appendix A)
+                        <b>Ready to start?</b> Click "Donate Now" and complete this short form
+                       
                  </div>  
                 </p>
             </div>
             <div class="card">
-                <h2 id="#testing" class="dancingScript">Blood Testing</h2>
+                <span id="testing" class="anchor" ></span>
+
+                <h2 class="dancingScript">Blood Testing</h2>
                 <p>
                     After completing the verbal screening and completing the medical history form,
                     donors will be notified that they are ready for the next step – a blood test.
@@ -83,7 +93,9 @@
             </div>
 
             <div class="card">
-                <h2 id="#collection" class="dancingScript">Collection and Storage</h2>
+                <span id="collection" class="anchor" ></span>
+
+                <h2 class="dancingScript">Collection and Storage</h2>
                 <p>
                     We request that donors follow careful collection and storage methods.
                     The milk recipients may be the most fragile and ill infants in NICUs.
@@ -109,11 +121,16 @@
                     you can pump and store your milk until the process is complete.
                 </p>
             </div>
-            <div id="#request" class="card">
+            <div class="card">
+                <span id="request" class="anchor" ></span>
+
+                
                 <h2 class="dancingScript">Request Supplies</h2>
                 <p class="centerTxt">
                     Already a donor and need more supplies?
-                    Click here!
+                    <a href="./requestForm.html">
+                        Click here!
+                    </a>
                 </p>
             </div>
         </div>
@@ -147,20 +164,20 @@
         </div>
         <div class="footerContent ">
             <div class="column">
-                <a class="footerTitle" href="./about.html"> Home </a>
+                <a class="footerTitle" href="./index.html"> Home </a>
            
                 <a class="footerTitle" href="./about.html"> About </a>
                 <a class="footerLink" href="./about.html#OurStory">Our Story</a>
                 <a class="footerLink" href="./about.html#WhoWeAre">Who We Are</a>
             </div>
             <div class="column">
-                <a class="footerTitle" href="./process.html"> Process </a>
-                <a class="footerLink" href="process.html#whyDonate">Why Donate?</a>
-                <a class="footerLink" href="./process.html#eligible">Am I Eligible?</a>
-                <a class="footerLink" href="./process.html#donorProcess">Donor Process</a>
-                <a class="footerLink" href="./process.html#testing">Blood Testing</a>
-                <a class="footerLink" href="./process.html#collection">Collection and Storage</a>
-                <a class="footerLink" href="./process.html#request">Request Supplies</a>
+                <a class="footerTitle" href="./donate.html"> Donate </a>
+                <a class="footerLink" href="./donate.html#whyDonate">Why Donate?</a>
+                <a class="footerLink" href="./donate.html#eligible">Am I Eligible?</a>
+                <a class="footerLink" href="./donate.html#donorProcess">Donor Process</a>
+                <a class="footerLink" href="./donate.html#testing">Blood Testing</a>
+                <a class="footerLink" href="./donate.html#collection">Collection and Storage</a>
+                <a class="footerLink" href="./donate.html#request">Request Supplies</a>
             </div>
             <div class="column">
                 <a class="footerTitle" href="./about.html"> FAQs </a>

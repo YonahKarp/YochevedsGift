@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Yocheved's Gift: something here</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+   
+  <!-- <link rel="icon" type="image/png" href="./icon.png"> -->
+
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/formStyles.css">
+  <link rel="stylesheet" href="./css/liteAccordion.css">
+
+
+</head>
+<body>
+
+    <div id="header" class="header2">
+        <div class="links">
+            <ul>
+                <li><a class="unStyle" href ="./about.html">About Us</a></li><li>
+                    <a class="unStyle" href ="./donate.html">Donate</a></li><li>
+                    <a class="unStyle" href ="./faqs.html">FAQs</a></li><li>
+                    <a class="unStyle" href ="./receive.html">Receive Milk</a></li><li>
+                    <a class="unStyle" href ="#contact" >Contact Us</a></li>
+            </ul>
+
+            <div class="menu">
+                <span class="l1"></span>
+                <span class="l2"></span>
+                <span class="l3"></span>
+            </div>
+        </div>
+        <a href="./index.html"><img class="logo" src = "./img/logo.png" alt="Yocheved's Gift logo"/></a>
+    </div>
+    <div class="formContainer">
+        <h2 class="pageTitle dancingScript">Donate Now</h2>
+        <div class="clearFix"></div>
+        <div class="formContent openSans">
+            <div class="card">
+                <p class="">
+                    If you believe you might be eligible to become a milk donor, please fill out this short form.
+                    We will review your answers and contact you within a few days
+                    with information on the next steps in the donor screening process.  
+                </p>
+                <p>
+                    Yocheved’s Gift follows the guidelines of the
+                    <a href="https://www.hmbana.org/">
+                        Human Milk Banking Association of North America 
+                    </a>(HMBANA) for screening donors.
+                </p>
+                <p class="small">
+                    If you would like to learn more about the donation process go to our 
+                    <a href="./donate.html#donorProcess">Donate</a> and <a href="./about.html">About Us</a> pages
+                </p>
+            </div>
+
+            <form id="applyForm" action="#" method="POST">
+                <div id="accord">     
+                    <div class="item">
+                        <h2><span>Contact Info</span></h2>
+                        <div class="accordSlideContent">
+                            <div class="form">
+                                <h3>Contact Info</h3>
+                                <div class="inputContainer">
+                                    <input type="text" name="firstName" required data-msg="First Name: please enter a valid value" data-page="0"/>
+                                    <div class="floating-label">First Name</div>
+                                </div>
+                                <div class="inputContainer">
+                                    <input type="text" name="lastName" required data-msg="Last Name: please enter a valid value" data-page="0"/>
+                                    <div class="floating-label">Last Name</div>
+                                </div>
+                                <div class="inputContainer">
+                                    <input type="number" name="phone" maxlength="20" required data-msg="Phone: please enter a valid value"  data-page="0"/>                        
+                                    <div class="floating-label">Phone</div>
+                                </div>
+                                <div class="inputContainer">
+                                    <input type="email" name="_replyto" required data-msg="Email: please enter a valid email (ex: yourAddress@gmail.com)" data-page="0"/>
+                                    <div class="floating-label">Email</div>
+                                </div>
+                                <div class="inputContainer">
+                                    <input type="text" name="address" required data-msg="Address: please enter a valid value" data-page="0"/>
+                                    <div class="floating-label">Address</div>
+                                </div>
+                                <div class="inputContainer">
+                                    <input type="text" name="city" required data-msg="City: please enter a valid value" data-page="0"/>
+                                    <div class="floating-label">City</div>
+                                </div>
+                                <div class="inputContainer">
+                                    <input type="text" name="state" required data-msg="State: please enter a valid value" data-page="0"/>
+                                    <div class="floating-label">State</div>
+                                </div>
+                                <div class="btnContainer nextButton">
+                                        <div class="rplButton">Next ►</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item collapse">
+                        <h2><span>Health Info</span></h2>
+                        <div class="accordSlideContent">
+                            <div class="form">
+                                <h3>Contact Info</h3>
+                                <div class="inputContainer">
+                                    <input type="date" name="babyBirthDate" required data-msg="Date of Baby's Birth: please enter a valid value" data-page="1"/>
+                                    <div class="floating-label">Date of Baby’s Birth</div>
+                                </div>
+                                <div class="inputContainer">
+                                        <p>
+                                            Do you have milk already collected that you would like to donate?
+                                        </p>
+                                        <div>
+                                            <input type="radio" name="hasMilk" value = "yes" required data-msg="Already collected milk: please answer (yes/no)" data-page="1">
+                                            <label for="hasMilk">yes</label>
+                                            <div class="inputContainer hiddenField">
+                                                <input type="number" name="quantity">
+                                                <div class="floating-label">quantity (oz)</div>
+                                            </div>
+                                        </div>
+                                        
+                                    <div>
+                                        <input type="radio" name="hasMilk" id="noMilk" required>
+                                        <label>
+                                            no
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="inputContainer">
+                                    <p>
+                                        Which medications, if any, were you taking while pumping the milk that you currently have?
+                                        (none, if not applicable)
+                                    </p>
+                                    <div>
+                                        <div class="inputContainer shownField">
+                                            <input type="text" name="meds">
+                                            <div class="floating-label">medications</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="btnContainer nextButton">
+                                        <div class="rplButton">Next ►</div>
+                                </div>
+                                
+                            </div> 
+                        </div>
+
+                    </div>
+                    
+                    <div class="item collapse">
+                        <h2><span>Agreements</span></h2>
+                        <div class="accordSlideContent shortMargins">
+                            <div class="form">
+                                <h3>Contact Info</h3>
+                                
+                                <div class="inputContainer">
+                                    <input class="left" type="checkbox" name="min200" required data-msg="Agree 200oz: please agree to continue" data-page="2">
+                                    <label>
+                                        I understand that Yocheved’s Gift asks for a minimum of 200oz 
+                                        of approved milk while I am a donor
+                                    </label>
+                                </div>
+                                <div class="inputContainer">
+                                    <input class="left" type="checkbox" name="bloodTest" required data-msg="Blood Test: please agree to continue" data-page="2">
+                                    <label>
+                                        I understand that to become a donor I will need to complete the required blood tests 
+                                    </label>
+                                </div>
+
+                                <p>
+                                    I am interested in becoming a donor for:
+                                </p>
+                                <div>
+                                    <input type="radio" name="donorType" value="donorComp" required data-msg="Donor Type: please select a type" data-page="2">
+                                    <label>
+                                        providing milk to be sold for which you will be compensated
+                                    </label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="donorType" value="donorHMBNA">
+                                    <label>
+                                        sick infants, where you can’t be compensated as per HMBANA regulations?
+                                    </label>
+                                </div>
+
+                                <div class="btnContainer submitBtn">
+                                        <div type="submit" class="rplButton">submit</div>
+                                </div>
+                                <div class="clearFix"></div>
+                                <a href="#errors">
+                                    <div class="errorMessage error hidden">
+                                        Uh oh, You seem to have missed some fields. Click the links below to find the issue(s).
+                                        Once you've completed the missing fields, submit again.
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="card hidden" id="errors">
+
+            </div>
+        </div>
+    </div> 
+
+    <div id="contact"></div>
+    <div id="footer">
+        <div id="contactUs">
+            <div class="slideOutBtn">Contact Us</div>
+            <div class="contactFormContainer">
+                <div class="form">
+                    <!-- <form action="https://formspree.io/Eli@ceAhead.com" method="POST"> -->
+                    <form action="#" method="POST">
+                        <div>          
+                            <input type="email" name="_replyto" placeholder="Email" required/><span>*</span>
+                        </div>
+                        <div>
+                            <input type="text" name="name" placeholder="Full Name" required /><span>*</span>
+                        </div>
+                        <input type="number" name="phone" placeholder="Phone" maxlength="20"/>                        
+                        <textarea name="message" placeholder="Message" required></textarea><span>*</span>
+                        <!-- <input type="hidden" name="_next" value="#" /> -->
+                        <input type="hidden" name="_subject" value="I want to learn more about Yocheved's Gift" />
+                        <div class="btnContainer">
+                                <div class="rplButton">Send</div>
+                                <div class ="rplCircle"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footerContent ">
+            <div class="column">
+                <a class="footerTitle" href="./index.html"> Home </a>
+           
+                <a class="footerTitle" href="./about.html"> About </a>
+                <a class="footerLink" href="./about.html#OurStory">Our Story</a>
+                <a class="footerLink" href="./about.html#WhoWeAre">Who We Are</a>
+            </div>
+            <div class="column">
+                <a class="footerTitle" href="./donate.html"> Donate </a>
+                <a class="footerLink" href="./donate.html#whyDonate">Why Donate?</a>
+                <a class="footerLink" href="./donate.html#eligible">Am I Eligible?</a>
+                <a class="footerLink" href="./donate.html#donorProcess">Donor Process</a>
+                <a class="footerLink" href="./donate.html#testing">Blood Testing</a>
+                <a class="footerLink" href="./donate.html#collection">Collection and Storage</a>
+                <a class="footerLink" href="./donate.html#request">Request Supplies</a>
+            </div>
+            <div class="column">
+                <a class="footerTitle" href="./about.html"> FAQs </a>
+                <a class="footerTitle" href="./about.html"> Receive Milk </a>
+                <a class="footerTitle" href="./about.html"> Forms </a>
+                <a class="footerLink" href="./about.html#OurStory">Donate Now!</a>
+                <a class="footerLink" href="./about.html#OurStory">Request more Supplies</a>
+            </div>
+        </div>
+    </div>       
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,400i|Raleway:400,700" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Gaegu|Wendy+One|Open+Sans:300, 300b" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"
+            integrity="sha384-R4/ztc4ZlRqWjqIuvf6RX5yb/v90qNGx6fS48N0tRxiGkqveZETq72KgDVJCp2TC
+                        sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw="
+            crossorigin="anonymous">
+    </script>
+ 
+    <script src="./liteaccordion.jquery.js"></script>
+    <script  src="./animation.js"></script>
+
+
+</body>
+</html>
