@@ -16,6 +16,11 @@
 
         &.open{
             transform: translateX(-0px);
+
+            .slideOutBtn:after{
+                transform: rotate(-180deg);
+                
+            }
         }
 
         .slideOutBtn{
@@ -28,6 +33,14 @@
             background: $colorPurple;
             padding: 10px 15px;
             cursor: pointer;
+
+            &:after{
+                content: "▲";
+                display: inline-block;
+                font-size: 15px;
+                padding: 0 5px;
+                transition: transform .2s
+            }
         }
 
         .contactFormContainer{
