@@ -51,7 +51,7 @@ body {
     .donateContainer .card h2 {
       margin: 0; }
     .donateContainer .card a {
-      color: #9d9dce;
+      color: #8181b9;
       text-decoration: none; }
     .donateContainer .card.beforeAnimated {
       transform: translateY(100px);

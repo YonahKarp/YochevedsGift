@@ -37,7 +37,7 @@ a.unStyle{
 body {margin:0;}
 
 .emphasis{
-    color: $colorPink;
+    color: $colorDarkPink;
     text-shadow: 6px 6px rgba(17, 17, 17, 0.5);
     @extend %fontH2;
     font-weight: 700;
@@ -119,12 +119,24 @@ body {margin:0;}
         background: $colorPurple;
         width: calc(60% - 35px);
         box-shadow: 10px 10px 5px rgba(17, 17, 17, 0.5);
-        display: inline-block;
+        display: inline-table;
         vertical-align: top;
         box-sizing: border-box;
 
         margin: 30px 15px 30px 20px;
-        padding: 60px 10% 60px 10%;
+        //padding: 60px 10% 60px 10%;
+        padding: 0 5%;
+
+        min-height: 410px;
+
+        position: relative;
+
+        span{
+
+            width: 90%;
+            display: table-cell;
+            vertical-align: middle;            
+        }
     }
 
     .callout{
@@ -135,7 +147,7 @@ body {margin:0;}
         display: inline-block;
         box-sizing: border-box;
         margin: 30px 20px 30px 15px;
-
+        min-height: 410px;
 
 
         div{
@@ -145,6 +157,7 @@ body {margin:0;}
 
         .finePrint{
             @extend %fontFine;
+            font-style: italic;
             padding: 5px 7% 30px 7%;
 
         }
@@ -154,20 +167,19 @@ body {margin:0;}
 @media only screen and (max-width: 740px) {
     .homeContent .text, .homeContent .callout{
         width: 90%;
-        display: block;
+        display: table;
         margin: 30px auto;
+
+        min-height: 10px;
+
+    }
+    .homeContent .text{
+        min-height: 350px;
+
     }
 }
 
 @media only screen and (max-width: 450px) {
-    %fontH2{font-size: 10vw;}
-    %fontSm{font-size: 3.5vw}
-
-    %fontFine{font-size: 8pt;}
-
-
-    %fontStnd{font-size: 5.5vw}
-    %fontMore{font-size: 6vw}
 
     #header .slideContent{
         min-height: 85vw;

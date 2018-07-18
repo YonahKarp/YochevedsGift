@@ -1,7 +1,9 @@
 $colorPink: #ffdbdb;
+$colorDarkPink: #ffb7b7;
+
 $colorBlue: #cff1fb;
 $colorPurple: rgb(177, 177, 236);
-$colorDarkPurple: rgb(157, 157, 206);
+$colorDarkPurple: rgb(129, 129, 185);
 $colorGreen: #d6fbe4;
 $colorYellow: #fcfdcd;
 $colorGrey: rgb(55, 55, 55);
@@ -12,7 +14,10 @@ $colorGrey: rgb(55, 55, 55);
 
 %fontMore{font-size: 20pt;}
 %fontH2{font-size: 35pt;}
-%fontFine{font-size: 10pt;}
+%fontXSm{font-size: 10pt;}
+%fontFine{font-size: 8pt;}
+
+
 
 /* adjust fonts */
 @media only screen and (max-width: 620px) {
@@ -23,7 +28,8 @@ $colorGrey: rgb(55, 55, 55);
     %fontH2{font-size: 10vw;}
     %fontSm{font-size: 3.5vw}
 
-    %fontFine{font-size: 8pt;}
+    %fontXSm{font-size: 8pt;}
+    %fontFine{font-size: 6pt;}
 
     %fontStnd{font-size: 5.5vw}
     %fontDblStnd{font-size: 11vw}

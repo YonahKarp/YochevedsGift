@@ -34,24 +34,13 @@
         <a href="./index.html"><img class="logo" src = "./img/logo.png" alt="Yocheved's Gift logo"/></a>
     </div>
     <div class="formContainer">
-        <h2 class="pageTitle dancingScript">Donate Now</h2>
+        <h2 class="pageTitle dancingScript">Request Supplies</h2>
         <div class="clearFix"></div>
         <div class="formContent openSans">
             <div class="card">
                 <p class="">
-                    If you believe you might be eligible to become a milk donor, please fill out this short form.
-                    We will review your answers and contact you within a few days
-                    with information on the next steps in the donor screening process.  
-                </p>
-                <p>
-                    Yocheved’s Gift follows the guidelines of the
-                    <a href="https://www.hmbana.org/">
-                        Human Milk Banking Association of North America 
-                    </a>(HMBANA) for screening donors.
-                </p>
-                <p class="small">
-                    If you would like to learn more about the donation process go to our 
-                    <a href="./donate.html#donorProcess">Donate</a> and <a href="./about.html">About Us</a> pages
+                    This page is for current donors who wish to request supplies.
+                    If you are interested in becoming a donor <a href="./donateNow.html"> click here!</a>
                 </p>
             </div>
 
@@ -67,8 +56,12 @@
                                     <div class="floating-label">First Name</div>
                                 </div>
                                 <div class="inputContainer">
-                                    <input type="text" name="lastName" required data-page="0"/>
+                                    <input type="text" name="lastName" required  data-page="0"/>
                                     <div class="floating-label">Last Name</div>
+                                </div>
+                                <div class="inputContainer">
+                                    <input type="number" name="lastName" required  data-page="0"/>
+                                    <div class="floating-label">Donor Number</div>
                                 </div>
                                 <div class="inputContainer">
                                     <input type="number" name="phone" maxlength="20" required data-page="0"/>                        
@@ -97,99 +90,53 @@
                         </div>
                     </div>
                     <div class="item collapse">
-                        <h2><span>Health Info</span></h2>
+                        <h2><span>Requested Supplies</span></h2>
                         <div class="accordSlideContent">
                             <div class="form">
-                                <h3>Health Info</h3>
+                                <h3>Requested Supplies</h3>
+                                
                                 <div class="inputContainer">
-                                    <input type="date" name="babyBirthDate" required data-page="1"/>
-                                    <div class="floating-label">Date of Baby’s Birth</div>
-                                </div>
-                                <div class="inputContainer">
-                                        <p>
-                                            Do you have milk already collected that you would like to donate?
-                                        </p>
+                                    <input class="left" type="checkbox" name="wantsBox">
+                                    <label>
+                                        Insulated box with prepaid shipping labels and ice packs
+                                    </label>
+                                    <div class="inputContainer hiddenField">
                                         <div>
-                                            <input type="radio" name="hasMilk" value = "yes" required data-page="1">
-                                            <label for="hasMilk">yes</label>
-                                            <div class="inputContainer hiddenField">
-                                                <input type="number" name="quantity">
-                                                <div class="floating-label">quantity (oz)</div>
-                                            </div>
+                                            <input type="radio" name="boxSize" value="small">
+                                            <label>
+                                                Small (about 100oz or less)
+                                            </label>
                                         </div>
-                                        
-                                    <div>
-                                        <input type="radio" name="hasMilk" id="noMilk" required>
-                                        <label>
-                                            no
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="inputContainer">
-                                    <p>
-                                        Which medications, if any, were you taking while pumping the milk that you currently have?
-                                        (none, if not applicable)
-                                    </p>
-                                    <div>
-                                        <div class="inputContainer shownField">
-                                            <input type="text" name="meds">
-                                            <div class="floating-label">medications</div>
+                                        <div>
+                                            <input type="radio" name="boxSize" value="med">
+                                            <label>
+                                                Medium (100-200 oz)
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" name="boxSize" value="large">
+                                            <label>
+                                                Large (200-400 oz)
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="btnContainer nextButton">
-                                        <div class="rplButton">Next ►</div>
-                                </div>
-                                
-                            </div> 
-                        </div>
-
-                    </div>
-                    
-                    <div class="item collapse">
-                        <h2><span>Agreements</span></h2>
-                        <div class="accordSlideContent shortMargins">
-                            <div class="form">
-                                <h3>Agreements</h3>
-                                
                                 <div class="inputContainer">
-                                    <input class="left" type="checkbox" name="min200" required data-page="2">
+                                    <input class="left" type="checkbox" name="bloodTest">
                                     <label>
-                                        I understand that Yocheved’s Gift asks for a minimum of 200oz 
-                                        of approved milk while I am a donor
-                                    </label>
-                                </div>
-                                <div class="inputContainer">
-                                    <input class="left" type="checkbox" name="bloodTest" required data-page="2">
-                                    <label>
-                                        I understand that to become a donor I will need to complete the required blood tests 
+                                        Milk Storage Bags
                                     </label>
                                 </div>
 
-                                <p>
-                                    I am interested in becoming a donor for:
-                                </p>
-                                <div>
-                                    <input type="radio" name="donorType" value="donorComp" required data-page="2">
-                                    <label>
-                                        providing milk to be sold for which you will be compensated
-                                    </label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="donorType" value="donorHMBNA">
-                                    <label>
-                                        sick infants, where you can’t be compensated as per HMBANA regulations?
-                                    </label>
-                                </div>
+                               
 
                                 <div class="btnContainer submitBtn">
                                         <div type="submit" class="rplButton">submit</div>
                                 </div>
                                 <div class="clearFix"></div>
-                                <a href="#errors">
+                                <a href="#formErrors">
                                     <div class="errorMessage error hidden">
-                                        Uh oh, You seem to have missed some fields.
+                                        Uh oh, You seem to have missed some fields. Click the links below to find the issue(s).
                                         Once you've completed the missing fields, submit again.
                                     </div>
                                 </a>
@@ -198,6 +145,10 @@
                     </div>
                 </div>
             </form>
+
+            <div class="card hidden" id="errors">
+
+            </div>
         </div>
     </div> 
 
@@ -253,9 +204,6 @@
             </div>
         </div>
     </div>       
-
-        <div id="alertLayer"></div>
-
     
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,400i|Raleway:400,700" rel="stylesheet">
 

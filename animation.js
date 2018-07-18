@@ -166,44 +166,49 @@ $(document).ready(function(){
         item[index].classList.remove("collapse");
     })
 
+    //alertLayer
+    var alertLayer = $("#alertLayer");
+    function showAlertLayer(message, timeout){
+        
+        alertLayer.text(message).show();
+        setTimeout(function(){
+            alertLayer.fadeOut()
+        },timeout)
+    }
+
     //form
     var tabs = $(".items")
-    var errors = $("#errors")
+    var errors = $(".errors")
     $(".submitBtn").click(function(){
         var form = $("#applyForm")[0];
-
-        errors.html('')
         
         if(form.checkValidity()){
             $(".item .errorMessage").addClass("hidden");
             errors.addClass("hidden")
+            showAlertLayer("Thank you, we will get back to you soon", 5000)
             //form.submit();
         }else{
 
             $(".item .errorMessage").removeClass("hidden");
-            errors.removeClass("hidden")
 
 
             $('#applyForm input:invalid, #applyForm textarea:invalid').addClass("attention");
             
-            errors.append('<h3 class="montserrat centerTxt">Errors</h3>')
-
+            var firstErrorPage = 2;
             $("#applyForm :invalid").each(function(i,e){
-                if(e.dataset.msg )
-                    errors.append('<div class="error" data-page="'+e.dataset.page+'">' + e.dataset.msg + '</div>')
+                if(e.dataset.page && e.dataset.page < firstErrorPage){
+                    firstErrorPage = e.dataset.page;
+                }   
             })
+
+            turnToPage(firstErrorPage);
         }
     })
 
-    errors.on("click", ".error", function(e){
-        var index = e.target.dataset.page;
+    function turnToPage(index){
         item.addClass("collapse");
         item[index].classList.remove("collapse");
-
-        $('html, body').animate({
-            scrollTop: $("#applyForm").offset().top -150
-        },500)
-    });
+    }
 
 
 });
