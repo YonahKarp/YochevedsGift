@@ -145,7 +145,6 @@ $(document).ready(function(){
         }
     });
 
-    //$('#accord').liteAccordion();
     var item =  $(".item"),
         header = item.find("h2");
     header.click(function() {
