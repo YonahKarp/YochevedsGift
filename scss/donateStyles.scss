@@ -1,23 +1,42 @@
 @import "./constants";
 
+#content{
+    opacity: 1;
+}
+
 body{
     background: $colorPurple;
 }
 
 #donateNow{
-    @extend %fontSm;
+    &.fixed{
+        position: fixed;
+        bottom: 50px;
+        right: 30px;
+    }
 
-    position: fixed;
-    bottom: 50px;
-    right: 30px;
-    background: $colorPink;
+    position: absolute;
+    right: 5%;
+    font-size: 15pt;
+    display: inline;
+   
+    background: $colorDarkPink;
     z-index: 100;
     box-shadow: 10px 10px 5px rgba(17, 17, 17, 0.5);
     padding: 20px;
 
+    @media only screen and (max-width: 740px) {
+        position: fixed;
+        bottom: 50px;
+        right: 30px;
+    }
+
     &.hidden{
         display: none;
     }
+
+
+
 }
 
 .donateContainer{

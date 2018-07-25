@@ -21,7 +21,7 @@
                     <a class="unStyle" href ="#contact" >Contact Us</a></li>
             </ul>
 
-            <div class="menu">
+            <div id="menu">
                 <span class="l1"></span>
                 <span class="l2"></span>
                 <span class="l3"></span>
@@ -29,11 +29,15 @@
         </div>
         <a href="./index.html"><img class="logo" src = "./img/logo.png" alt="Yocheved's Gift logo"/></a>
     </div>
-    <a id="donateNow" href="./donateNow.html" class="button cta">
-        Donate now!  ►
-    </a>
+
+
     <div class="donateContainer">
+            <a id="donateNow" href="./donateNow.html" class="button cta">
+                Donate now!  ►
+            </a>
         <h2 class="pageTitle dancingScript">Donate Milk</h2>
+        
+        
         <div class="clearFix"></div>
         <div class="donateContent openSans">
             <div  class="card">
@@ -45,13 +49,52 @@
                 </p>
             </div>
             <div class="card">
-                <span id="eligible" class="anchor" ></span>
+                <span id="eligible" class="anchor"></span>
                 <h2 class="dancingScript">Am I Eligible?</h2>
                 <p class="centerTxt">
                     You’re likely to qualify if you have more milk than your baby needs
                     and are generally in good health, don’t smoke, and use approved medications. 
                 </p>
             </div>
+
+            <div class="card">
+                <span id="compensation" class="anchor"></span>
+
+                <h2 class="dancingScript">Will I be compensated for my donation?</h2>
+                <p>
+                    If you choose to donate specifically for ill and premature babies,
+                    we cannot compensate, as per the New York Milk Bank’s policies.
+                    We work with the NYMB to distribute the milk to hospitals and parents in need,
+                    and work within their guidelines for those infants.
+                </p>
+                <p>
+                    However, if you choose to donate for babies that aren’t in critical need,
+                    we will compensate for your time and effort at the following rates*:
+                </p>
+                
+                <ul>
+                    <li>First 99 ounces donated: <b>$.90/ounce</b></li>
+                    <li>From the 100th ounce through 200th ounce: <b>$1/ounce</b></li>
+                    <li>For every ounce after 200: <b>$1.10/ounce</b></li>
+                </ul>
+                <p class="fontFine">
+                    <i>
+                    *Milk volume is used as an indirect measure of time and effort for milk donation.
+                    Milk volume will be as determined by Yocheved’s Gift, in its sole discretion.
+                    We will weigh the milk, at the time and in the condition that it is received at our facility,
+                    and calculate the volume based on measured weight, excluding any packaging materials,
+                    using standard operating procedures.
+                    </i>
+                </p>
+                <p>
+                    Compensation is only for milk that is qualified for use.
+                    When milk is received at Yocheved’s Gift it must undergo and pass several rigorous testing procedures,
+                    including but not limited to bacterial screening and drug screening.
+                    Upon successful completion of these screening procedures, the milk is considered qualified for use
+                </p>
+                
+            </div>
+
             <div class="card">
                 <span id="donorProcess" class="anchor" ></span>
 
@@ -65,11 +108,9 @@
                 </ol>
                 <h4>The donor set-up process takes 2 - 3 weeks to complete</h4>
                 <h4>Approved donors can provide milk up to 6 months old if it was properly stored.</h4>
-                 <div>
-                        <b>Ready to start?</b> Click "Donate Now" and complete this short form
-                       
-                 </div>  
-                </p>
+                <div>
+                        <b>Ready to start?</b> <a href="./donateNow.html">Click here</a> and complete this short form
+                </div>
             </div>
             <div class="card">
                 <span id="testing" class="anchor" ></span>
@@ -82,8 +123,12 @@
                     as part of the screening process.
                     The blood test helps assure safety for the fragile babies that use the milk.
                 </p>
+                <p>
+                    The actual tests are not performed until you have collected at least 100 ounces of milk
+                    and your screening forms have been signed and returned
+                </p>
                 <h4>The cost of all blood testing will be covered.</h4>
-                <p>Blood can be drawn at a Quest Diagnostics location or by your physician.</p>
+                <p>We will inform you of a location near you where the blood can be drawn.</p>
                 <p>
                     The blood is tested for antigen to the HIV-1 and -2 and Hepatitis B viruses,
                     and antibodies to Hepatitis C, and HTLV-I and –II, and syphilis. 
@@ -134,6 +179,9 @@
         </div>
     </div> 
 
+    <div id="alertLayer"></div>
+
+    
     <div id="contact"></div>
     <div id="footer">
         <div id="contactUs">
@@ -141,7 +189,9 @@
             <div class="contactFormContainer">
                 <div class="form">
                     <!-- <form action="https://formspree.io/Eli@ceAhead.com" method="POST"> -->
-                    <form action="#" method="POST">
+                    <form action="https://formspree.io/Eli@ceAhead.com" method="POST">
+                        <input type="hidden" name="_next" value="#thankyou" />
+
                         <div>          
                             <input type="email" name="_replyto" placeholder="Email" required/><span>*</span>
                         </div>
@@ -172,6 +222,7 @@
                 <a class="footerTitle" href="./donate.html"> Donate </a>
                 <a class="footerLink" href="./donate.html#whyDonate">Why Donate?</a>
                 <a class="footerLink" href="./donate.html#eligible">Am I Eligible?</a>
+                <a class="footerLink" href="./donate.html#compensation">Will I be Compensated?</a>
                 <a class="footerLink" href="./donate.html#donorProcess">Donor Process</a>
                 <a class="footerLink" href="./donate.html#testing">Blood Testing</a>
                 <a class="footerLink" href="./donate.html#collection">Collection and Storage</a>
@@ -187,16 +238,10 @@
         </div>
     </div>       
     
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,400i|Raleway:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,400i|Raleway:400,700|Dancing+Script:400,700|Open+Sans:300" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Gaegu|Wendy+One|Open+Sans:300, 300b" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"
-            integrity="sha384-R4/ztc4ZlRqWjqIuvf6RX5yb/v90qNGx6fS48N0tRxiGkqveZETq72KgDVJCp2TC
-                        sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw="
-            crossorigin="anonymous">
-    </script>
- 
     <script  src="./js/animation.js"></script>
+    <script  src="./js/donate.js"></script>
 
 </body>
 </html>

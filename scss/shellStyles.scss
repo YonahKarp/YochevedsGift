@@ -1,0 +1,11 @@
+@import './constants.scss';
+@import './styles';
+@import './header.scss';
+@import './footer.scss';
+
+#content{
+    opacity: 0;
+    min-height: 70vh;
+    transition: opacity 1s;
+}
+

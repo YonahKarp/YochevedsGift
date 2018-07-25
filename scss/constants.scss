@@ -17,12 +17,20 @@ $colorGrey: rgb(55, 55, 55);
 %fontXSm{font-size: 10pt;}
 %fontFine{font-size: 8pt;}
 
+.fontFine{
+    @extend %fontFine;
+}
 
+@media only screen and (max-width: 900px) {
+    %fontH2{font-size: 28pt;}
+}
 
 /* adjust fonts */
 @media only screen and (max-width: 620px) {
     %fontSm{font-size: 12pt}
 }
+
+
 
 @media only screen and (max-width: 450px) {
     %fontH2{font-size: 10vw;}

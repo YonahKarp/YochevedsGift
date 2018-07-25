@@ -4,6 +4,13 @@
 .formContainer h2.pageTitle {
   font-size: 35pt; }
 
+.fontFine {
+  font-size: 8pt; }
+
+@media only screen and (max-width: 900px) {
+  .formContainer h2.pageTitle {
+    font-size: 28pt; } }
+
 /* adjust fonts */
 @media only screen and (max-width: 620px) {
   .card p.small, #accord .item .form, .error {
@@ -13,10 +20,18 @@
   .formContainer h2.pageTitle {
     font-size: 10vw; }
   .card p.small, #accord .item .form, .error {
-    font-size: 3.5vw; } }
+    font-size: 3.5vw; }
+  .fontFine {
+    font-size: 6pt; } }
+
+#content {
+  opacity: 1; }
 
 body {
   background: #ffdbdb; }
+
+.hide {
+  display: none; }
 
 .formContainer {
   margin-top: 150px;

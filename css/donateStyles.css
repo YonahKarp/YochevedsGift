@@ -1,31 +1,44 @@
-#donateNow {
-  font-size: 15pt; }
-
 .donateContainer h2.pageTitle {
   font-size: 35pt; }
 
-/* adjust fonts */
-@media only screen and (max-width: 620px) {
-  #donateNow {
-    font-size: 12pt; } }
+.fontFine {
+  font-size: 8pt; }
 
+@media only screen and (max-width: 900px) {
+  .donateContainer h2.pageTitle {
+    font-size: 28pt; } }
+
+/* adjust fonts */
 @media only screen and (max-width: 450px) {
   .donateContainer h2.pageTitle {
     font-size: 10vw; }
-  #donateNow {
-    font-size: 3.5vw; } }
+  .fontFine {
+    font-size: 6pt; } }
+
+#content {
+  opacity: 1; }
 
 body {
   background: #b1b1ec; }
 
 #donateNow {
-  position: fixed;
-  bottom: 50px;
-  right: 30px;
-  background: #ffdbdb;
+  position: absolute;
+  right: 5%;
+  font-size: 15pt;
+  display: inline;
+  background: #ffb7b7;
   z-index: 100;
   box-shadow: 10px 10px 5px rgba(17, 17, 17, 0.5);
   padding: 20px; }
+  #donateNow.fixed {
+    position: fixed;
+    bottom: 50px;
+    right: 30px; }
+  @media only screen and (max-width: 740px) {
+    #donateNow {
+      position: fixed;
+      bottom: 50px;
+      right: 30px; } }
   #donateNow.hidden {
     display: none; }
 

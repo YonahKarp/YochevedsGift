@@ -8,6 +8,8 @@
   <!-- <link rel="icon" type="image/png" href="./icon.png"> -->
 
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/homeStyles.css">
+
 </head>
 <body>
 
@@ -33,7 +35,7 @@
                         <a class="unStyle" href ="#contact" >Contact Us</a></li>
                 </ul>
 
-                <div class="menu">
+                <div id="menu">
                     <span class="l1"></span>
                     <span class="l2"></span>
                     <span class="l3"></span>
@@ -52,9 +54,9 @@
                         with others
                     </h2>
                 </div><div class="question">
-                        Not everyone is fortunate enough to have a supply of milk.
-                        Pasteurized donated breast milk is the next best option.
-                    <a class="button cta" href="./about.html">Learn More   ►</a>
+                    Pasteurized donor breast milk is the best option for 
+                    those without a sufficient milk supply.
+                    <a class="button cta" href="./donate.html">Learn More   ►</a>
                 </div>
             </div>
 
@@ -64,20 +66,20 @@
                         Every precious <span class="emphasis">drop</span> counts
                     </h2>
                 </div><div class="question">
-                    Every ounce of your contribution will go towards helping families 
-                    provide their children with the best nutrition available.
-                    <a class="button cta" href="./about.html">Learn More   ►</a>
+                    Every ounce will enable families to provide their
+                    children with the best nutrition available.
+                    <a class="button cta" href="./donate.html">Learn More   ►</a>
                 </div>
             </div>
 
             <div class="slideContent">
                 <div class="tagLine">
                     <h2>
-                        Your breastmilk can <span class="emphasis">save lives</span>
+                        Mother's milk can <span class="emphasis">save lives</span>
                     </h2>
                 </div><div class="question">
                     Human milk gives all babies the best start in life, 
-                    but for premature or medically fragile infants breast milk can be life-saving.
+                    but for premature or medically fragile infants, breast milk is life-saving.
                     <a class="button cta" href="./donate.html">Donate Now   ►</a>
                 </div>
             </div>
@@ -85,15 +87,14 @@
             <div class="slideContent">
                 <div class="tagLine">
                     <h2>
-                        Safe <span class="emphasis">Kosher</span> milk
+                        Safe <span class="emphasis">kosher</span> milk
                     </h2>
                     <h2>
                         for our community
                     </h2>
                 </div><div class="question">
-                    Each donation is processed by our team of professionals to ensure
-                    that recpients get fresh, unadulterated milk
-                    <a class="button cta" href="./about.html">Learn More   ►</a>
+                    Helping parents safely provide milk from a kosher source when they cannot.
+                    <a class="button cta" href="./donate.html">Learn More   ►</a>
                 </div>
             </div>
         </div>
@@ -108,8 +109,8 @@
             </span>
         </div><div class="callout">
             <div>
-                Receive $1 for every qualified ounce of breast milk received*
-                <a class="button cta right" href="./donateNow.html">Donate Now   ►</a>
+                Receive $$ for every qualified ounce of breast milk received*
+                <a class="button cta right" href="./donate.html#compensation">Donate Now   ►</a>
                 <ul class="clearFix"></ul>
             </div>
             <p class="finePrint">
@@ -122,6 +123,8 @@
         </div>
     </div>
 
+    <div id="alertLayer"></div>
+
     <div id="contact"></div>
     <div id="footer">
         <div id="contactUs">
@@ -129,7 +132,8 @@
             <div class="contactFormContainer">
                 <div class="form">
                     <!-- <form action="https://formspree.io/Eli@ceAhead.com" method="POST"> -->
-                    <form action="#" method="POST">
+                    <form action="https://formspree.io/Eli@ceAhead.com" method="POST">
+                            <input type="hidden" name="_next" value="#thankyou" />
                         <div>          
                             <input type="email" name="_replyto" placeholder="Email" required/><span>*</span>
                         </div>
@@ -160,6 +164,7 @@
                 <a class="footerTitle" href="./donate.html"> Donate </a>
                 <a class="footerLink" href="./donate.html#whyDonate">Why Donate?</a>
                 <a class="footerLink" href="./donate.html#eligible">Am I Eligible?</a>
+                <a class="footerLink" href="./donate.html#compensation">Will I be Compensated?</a>
                 <a class="footerLink" href="./donate.html#donorProcess">Donor Process</a>
                 <a class="footerLink" href="./donate.html#testing">Blood Testing</a>
                 <a class="footerLink" href="./donate.html#collection">Collection and Storage</a>
@@ -176,14 +181,10 @@
     </div> 
     
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,400i|Raleway:400,700" rel="stylesheet">
-   
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"
-            integrity="sha384-R4/ztc4ZlRqWjqIuvf6RX5yb/v90qNGx6fS48N0tRxiGkqveZETq72KgDVJCp2TC
-                        sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw="
-            crossorigin="anonymous">
-    </script>
 
     <script  src="./js/animation.js"></script>
+    <script  src="./js/home.js"></script>
+
 
 </body>
 </html>

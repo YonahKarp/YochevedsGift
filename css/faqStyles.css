@@ -2,10 +2,22 @@
 .faqContainer h2.pageTitle, .card .plus {
   font-size: 35pt; }
 
+.fontFine {
+  font-size: 8pt; }
+
+@media only screen and (max-width: 900px) {
+  .faqContainer h2.pageTitle, .card .plus {
+    font-size: 28pt; } }
+
 /* adjust fonts */
 @media only screen and (max-width: 450px) {
   .faqContainer h2.pageTitle, .card .plus {
-    font-size: 10vw; } }
+    font-size: 10vw; }
+  .fontFine {
+    font-size: 6pt; } }
+
+#content {
+  opacity: 1; }
 
 body {
   background: #d6fbe4; }

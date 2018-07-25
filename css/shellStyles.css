@@ -35,6 +35,42 @@
   #header .links ul li a, html {
     font-size: 5.5vw; } }
 
+#footer .footerContent a.footerTitle, .form .floating-label {
+  font-size: 15pt; }
+
+#header .links ul li a, html {
+  font-size: 18pt; }
+
+.emphasis {
+  font-size: 35pt; }
+
+#footer .footerContent a.footerLink {
+  font-size: 10pt; }
+
+.fontFine {
+  font-size: 8pt; }
+
+@media only screen and (max-width: 900px) {
+  .emphasis {
+    font-size: 28pt; } }
+
+/* adjust fonts */
+@media only screen and (max-width: 620px) {
+  #footer .footerContent a.footerTitle, .form .floating-label {
+    font-size: 12pt; } }
+
+@media only screen and (max-width: 450px) {
+  .emphasis {
+    font-size: 10vw; }
+  #footer .footerContent a.footerTitle, .form .floating-label {
+    font-size: 3.5vw; }
+  #footer .footerContent a.footerLink {
+    font-size: 8pt; }
+  .fontFine {
+    font-size: 6pt; }
+  #header .links ul li a, html {
+    font-size: 5.5vw; } }
+
 #header {
   min-height: 700px;
   color: white;
@@ -381,3 +417,267 @@ body {
     display: inline-block; }
 
 /* About Us */
+#header {
+  min-height: 700px;
+  color: white;
+  position: relative; }
+  #header #menu {
+    display: none; }
+  #header .headerContent {
+    min-height: 700px;
+    background: rgba(17, 17, 17, 0.3);
+    background: linear-gradient(rgba(17, 17, 17, 0.3), rgba(17, 17, 17, 0.6));
+    position: relative;
+    overflow: hidden;
+    box-shadow: 10px 10px 5px rgba(17, 17, 17, 0.5); }
+  #header .logo {
+    width: 15%;
+    min-width: 100px;
+    max-width: 150px;
+    position: absolute;
+    left: 1%;
+    top: 5px;
+    background: white;
+    border-radius: 20px; }
+  #header .links {
+    height: 100px;
+    margin-left: calc(120px + 3%); }
+    #header .links ul {
+      margin: 0;
+      height: 100%;
+      padding: 0; }
+      #header .links ul li {
+        display: inline-block;
+        width: 20%;
+        height: 100%; }
+        #header .links ul li a {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          vertical-align: top;
+          padding: 30px 0; }
+      #header .links ul a:hover {
+        background: rgba(0, 0, 0, 0.5);
+        border-bottom: #b1b1ec 2px solid; }
+
+@media only screen and (max-width: 900px) {
+  .emphasis {
+    font-size: 28pt; } }
+
+@media only screen and (max-width: 740px) {
+  #header #menu {
+    display: block;
+    position: absolute;
+    right: 20px;
+    margin: 20px;
+    top: 3%;
+    transition: right 1s ease-in-out;
+    z-index: 20; }
+    #header #menu > span {
+      display: block;
+      width: 32px;
+      height: 4px;
+      margin-top: 6px;
+      background: #fff;
+      transition: .3s ease-in-out;
+      box-shadow: 2px 2px rgba(17, 17, 17, 0.5); }
+    #header #menu.open {
+      position: fixed;
+      right: 70%;
+      transform: rotate(-45deg); }
+      #header #menu.open > span:nth-child(1) {
+        -webkit-transform: translateY(7px);
+        -ms-transform: translateY(7px);
+        transform: translateY(7px); }
+      #header #menu.open > span:nth-child(2) {
+        opacity: 0; }
+      #header #menu.open > span:nth-child(3) {
+        -webkit-transform: rotate(-90deg) translateX(13px);
+        -ms-transform: rotate(-90deg) translateX(13px);
+        transform: rotate(-90deg) translateX(13px); }
+  #header .links ul {
+    position: fixed;
+    display: inline-block;
+    transform: translateX(550px);
+    right: 0;
+    margin: 0;
+    padding: 0;
+    background: rgba(25, 25, 25, 0.9);
+    width: 70%;
+    height: 100%;
+    z-index: 111;
+    transition: ease-in-out transform 1s; }
+    #header .links ul.open {
+      transform: translateX(0); }
+    #header .links ul li {
+      width: 100%;
+      height: unset; }
+      #header .links ul li a {
+        padding: 15px 30px;
+        text-align: right;
+        border-bottom: 2px grey solid; } }
+
+#header.header2 {
+  min-height: unset;
+  background: white;
+  color: #373737 !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 10px 10px 5px rgba(17, 17, 17, 0.5); }
+  #header.header2 #menu > span {
+    background: #373737;
+    transition: .3s ease-in-out; }
+  @media only screen and (min-width: 741px) {
+    #header.header2 a.unStyle {
+      color: #373737; } }
+
+#footer {
+  background: #373737;
+  min-height: 300px;
+  padding: 15px 5%;
+  margin-top: 15px;
+  position: relative;
+  width: 100%;
+  overflow-x: hidden; }
+  #footer #contactUs {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    transform: translateX(300px);
+    transition: transform .8s ease-in-out; }
+    #footer #contactUs.open {
+      transform: translateX(0px); }
+      #footer #contactUs.open .slideOutBtn:after {
+        transform: rotate(-180deg); }
+    #footer #contactUs .slideOutBtn {
+      position: absolute;
+      right: 300px;
+      transform: rotate(270deg);
+      transform-origin: 100% 100%;
+      white-space: nowrap;
+      background: #b1b1ec;
+      padding: 10px 15px;
+      cursor: pointer; }
+      #footer #contactUs .slideOutBtn:after {
+        content: "▲";
+        display: inline-block;
+        font-size: 15px;
+        padding: 0 5px;
+        transition: transform .2s; }
+    #footer #contactUs .contactFormContainer {
+      position: relative;
+      width: 300px;
+      min-height: 250px;
+      background: #b1b1ec;
+      padding: 15px; }
+  #footer .footerContent {
+    columns: 3 200px;
+    column-gap: 5vw;
+    column-rule: 1px dotted whitesmoke; }
+    #footer .footerContent .column {
+      break-inside: avoid; }
+    #footer .footerContent a {
+      color: white;
+      padding: 10px 0;
+      display: table;
+      width: 175px;
+      text-decoration: none; }
+    #footer .footerContent a.footerTitle {
+      padding-top: 30px;
+      text-transform: uppercase;
+      box-sizing: border-box;
+      border-bottom: 2px solid #b1b1ec; }
+
+.form {
+  font-size: 16px; }
+  .form input:not([type="radio"]):not([type="checkbox"]), .form textarea, .form select {
+    width: 90%;
+    margin: 0 auto 10px;
+    text-indent: 15px;
+    border-bottom: 1px solid #ddd;
+    color: #373737;
+    border-radius: 5px;
+    background: transparent;
+    font: 16px Arial, Helvetica, sans-serif;
+    height: 35px; }
+  .form input[type=radio], .form input[type=checkbox] {
+    margin-bottom: 10px;
+    display: inline-block; }
+    .form input[type=radio]:checked, .form input[type=checkbox]:checked {
+      padding-bottom: 50px; }
+      .form input[type=radio]:checked ~ .hiddenField, .form input[type=checkbox]:checked ~ .hiddenField {
+        max-height: 100px;
+        opacity: 1;
+        pointer-events: unset; }
+      .form input[type=radio]:checked .shownField, .form input[type=checkbox]:checked .shownField {
+        max-height: 0px;
+        opacity: 0;
+        pointer-events: none; }
+  .form .shownField {
+    max-height: 100px;
+    opacity: 1;
+    transition: max-height .7s ease-in-out, opacity .7s ease-in-out; }
+  .form .hiddenField {
+    max-height: 0px;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height .7s ease-in-out, opacity .7s ease-in-out; }
+  .form input[type=number]::-webkit-inner-spin-button,
+  .form input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }
+  .form .attention:invalid {
+    background-color: #dd3a3a !important; }
+    .form .attention:invalid ~ .floating-label {
+      background-color: #dd3a3a !important;
+      color: white; }
+    .form .attention:invalid ~ label {
+      color: #dd3a3a !important; }
+  .form input[required] ~ span, .form textarea[required] ~ span {
+    display: none; }
+  .form input[required]:invalid ~ span, .form textarea[required]:invalid ~ span {
+    display: inline;
+    color: #dd3a3a;
+    padding-left: 10px;
+    vertical-align: top; }
+  .form textarea {
+    resize: none;
+    height: 50px; }
+  .form .btnContainer {
+    height: 40px;
+    width: 90%;
+    display: inline-block; }
+  .form .rplButton {
+    color: #373737;
+    background-color: #cff1fb;
+    font-size: 14pt;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer; }
+    .form .rplButton:active {
+      background-color: #d6fbe4; }
+  .form .inputContainer {
+    position: relative;
+    margin-bottom: 5px; }
+  .form input:focus ~ .floating-label,
+  .form input:not(:focus):valid ~ .floating-label {
+    top: -5px;
+    font-size: 10px;
+    opacity: 1;
+    padding: 0 5px; }
+  .form .floating-label {
+    position: absolute;
+    display: inline-block;
+    color: #777;
+    pointer-events: none;
+    left: 20px;
+    top: 7px;
+    transition: 0.2s ease top, 0.2s ease font-size; }
+
+#content {
+  opacity: 0;
+  min-height: 70vh;
+  transition: opacity 1s; }

@@ -1,0 +1,208 @@
+@import './constants.scss';
+
+#content{
+    opacity: 1;
+}
+
+.slideContent{
+    width: 91%;
+    min-height: 220px;
+    display: none;
+    text-align: center;
+    opacity: 0;
+
+    &.active{
+        opacity: 1;
+        display: block;
+        animation: fadeIn 1s ease-in-out;
+        -webkit-animation: fadeIn 1s ease-in-out;
+    }
+
+    > div{
+        display: inline-block;
+        text-align: left;
+    }
+
+    .tagLine{
+        position: absolute;
+        top: calc(100px + 6%);
+        left: 6%;
+    }
+
+    .question{
+        @extend %fontStnd;
+        width: 56%;            
+        padding: 8px 0 0 20px;
+        vertical-align: top;
+        font-style: italic;
+
+        position: absolute;
+        bottom: 15%;
+        right: 6%;
+    }  
+
+    h2{
+        @extend %fontH2;
+        font-weight: bold;
+        margin: 0;
+        // font-family: 'Dancing Script', cursive;
+
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    %fontH2{font-size: 28pt;}
+}
+
+@media only screen and (max-width: 740px) {
+    .slideContent{
+        min-height: 400px;
+        text-align: unset;
+        .question{
+            width: 94%;
+        }
+    }
+}
+
+.blur{
+    transition: opacity 1s ease-in-out;
+
+    height: 100%;
+    width: 100%;
+    background: rgba(17, 17, 17, 0.5);
+    z-index: -1; 
+}
+
+#blur1{
+    background: url("../img/slide1.jpg") center center no-repeat;
+    background-size: cover;
+    position: absolute;
+
+    left:0px;top:0px;bottom:0px
+}
+
+#blur2{
+    opacity: 0;
+}
+
+#page-select{
+    position: absolute;
+    right: 5%;
+    top: 36%;
+    z-index: 10;
+
+    .select{
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 15px 0;
+        border: 0.1px solid white;
+
+        &.active{
+            background-color: $colorBlue;
+            border: 1px solid $colorBlue;
+        }
+    }
+}
+
+.table{display: table;}
+.table-cell{display: table-cell}
+
+.homeContent{
+    color: $colorGrey;
+    font-family: 'Raleway', Arial, sans-serif;
+
+    .table-cell{
+        vertical-align: middle;
+    }
+
+    .text{
+        @extend %fontMore;
+        background: $colorPurple;
+        width: calc(60% - 35px);
+        box-shadow: 10px 10px 5px rgba(17, 17, 17, 0.5);
+        display: inline-table;
+        vertical-align: top;
+        box-sizing: border-box;
+
+        margin: 30px 15px 30px 20px;
+        //padding: 60px 10% 60px 10%;
+        padding: 0 5%;
+
+        min-height: 380px;
+
+        position: relative;
+
+        span{
+
+            width: 90%;
+            display: table-cell;
+            vertical-align: middle;            
+        }
+    }
+    
+    .callout{
+        background: $colorBlue;
+        width: calc(40% - 35px);
+        box-shadow: 10px 10px 5px rgba(17, 17, 17, 0.5);
+
+        display: inline-block;
+        box-sizing: border-box;
+        margin: 30px 20px 30px 15px;
+        min-height: 380px;
+
+
+        div{
+            padding: 30px 7% 30px 7%;
+            background: $colorPink;
+        }
+
+        .finePrint{
+            @extend %fontFine;
+            font-style: italic;
+            padding: 5px 7% 30px 7%;
+
+        }
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    .homeContent .text, .homeContent .callout{
+        width: 90%;
+        display: table;
+        margin: 30px auto;
+
+        min-height: 10px;
+
+    }
+    .homeContent .text{
+        min-height: 350px;
+
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
+    #header .slideContent{
+        min-height: 85vw;
+    }
+
+    .btn-box{
+        font-size: 8pt;
+    }
+
+    // #header .slideContent h2{
+    //     font-size: 10vw;
+    // }
+    
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}  
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}

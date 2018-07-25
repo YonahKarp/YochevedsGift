@@ -22,7 +22,7 @@
                     <a class="unStyle" href ="#contact" >Contact Us</a></li>
             </ul>
 
-            <div class="menu">
+            <div id="menu">
                 <span class="l1"></span>
                 <span class="l2"></span>
                 <span class="l3"></span>
@@ -84,10 +84,11 @@
                     <span class="plus"></span> Can you use my prenatal blood work instead of doing a new blood test?
                 </h3>
                 <p>
-                    Unfortunately, we cannot.
+                    All prospective breastmilk donors must have blood testing if the required tests
+                    have not been performed by your attending health care provider within 6 months prior to donation.
+                    However, some tests we require are rarely done during the prenatal period.
                     The blood test is the last step in donor screening because we need to receive
                     the first donation within 30 days of the test being done.
-                    Also, there are some tests we require that are rarely done during the prenatal period.
                 </p>
             </div>
             <div class="card">
@@ -102,9 +103,11 @@
                     It contains many special properties that cannot be duplicated by commercial milk formulas.
                 </p>
             </div>
-
         </div>
     </div> 
+
+    <div id="alertLayer"></div>
+
 
     <div id="contact"></div>
     <div id="footer">
@@ -113,7 +116,9 @@
             <div class="contactFormContainer">
                 <div class="form">
                     <!-- <form action="https://formspree.io/Eli@ceAhead.com" method="POST"> -->
-                    <form action="#" method="POST">
+                    <form action="https://formspree.io/Eli@ceAhead.com" method="POST">
+                        <input type="hidden" name="_next" value="#thankyou" />
+
                         <div>          
                             <input type="email" name="_replyto" placeholder="Email" required/><span>*</span>
                         </div>
@@ -144,6 +149,7 @@
                 <a class="footerTitle" href="./donate.html"> Donate </a>
                 <a class="footerLink" href="./donate.html#whyDonate">Why Donate?</a>
                 <a class="footerLink" href="./donate.html#eligible">Am I Eligible?</a>
+                <a class="footerLink" href="./donate.html#compensation">Will I be Compensated?</a>
                 <a class="footerLink" href="./donate.html#donorProcess">Donor Process</a>
                 <a class="footerLink" href="./donate.html#testing">Blood Testing</a>
                 <a class="footerLink" href="./donate.html#collection">Collection and Storage</a>
@@ -159,16 +165,11 @@
         </div>
     </div>       
     
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,400i|Raleway:400,700" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Gaegu|Wendy+One|Open+Sans:300, 300b" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"
-            integrity="sha384-R4/ztc4ZlRqWjqIuvf6RX5yb/v90qNGx6fS48N0tRxiGkqveZETq72KgDVJCp2TC
-                        sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw="
-            crossorigin="anonymous">
-    </script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,400i|Raleway:400,700|Dancing+Script:400,700|Open+Sans:300" rel="stylesheet">
  
-    <script  src="./js/animation.js"></script>
+    <script src="./js/animation.js"></script>
+    <script src="./js/faqs.js"></script>
+
 
 
 </body>

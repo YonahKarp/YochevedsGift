@@ -1,10 +1,22 @@
 .receiveContainer h2.pageTitle {
   font-size: 35pt; }
 
+.fontFine {
+  font-size: 8pt; }
+
+@media only screen and (max-width: 900px) {
+  .receiveContainer h2.pageTitle {
+    font-size: 28pt; } }
+
 /* adjust fonts */
 @media only screen and (max-width: 450px) {
   .receiveContainer h2.pageTitle {
-    font-size: 10vw; } }
+    font-size: 10vw; }
+  .fontFine {
+    font-size: 6pt; } }
+
+#content {
+  opacity: 1; }
 
 body {
   background: #fcfdcd; }

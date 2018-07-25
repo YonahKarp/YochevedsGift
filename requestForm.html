@@ -22,7 +22,7 @@
                     <a class="unStyle" href ="#contact" >Contact Us</a></li>
             </ul>
 
-            <div class="menu">
+            <div id="menu">
                 <span class="l1"></span>
                 <span class="l2"></span>
                 <span class="l3"></span>
@@ -42,6 +42,9 @@
             </div>
 
             <form id="applyForm" action="#" method="POST">
+                <input type="hidden" name="_next" value="#thankyou" />
+                <input type="hidden" name="_subject" value="I would like to request more supplies" />
+
                 <div id="accord">     
                     <div class="item">
                         <h2><span>Contact Info</span></h2>
@@ -142,12 +145,10 @@
                     </div>
                 </div>
             </form>
-
-            <div class="card hidden" id="errors">
-
-            </div>
         </div>
     </div> 
+
+    <div id="alertLayer"></div>
 
     <div id="contact"></div>
     <div id="footer">
@@ -156,7 +157,8 @@
             <div class="contactFormContainer">
                 <div class="form">
                     <!-- <form action="https://formspree.io/Eli@ceAhead.com" method="POST"> -->
-                    <form action="#" method="POST">
+                    <form action="https://formspree.io/Eli@ceAhead.com" method="POST">
+                        <input type="hidden" name="_next" value="#thankyou" />
                         <div>          
                             <input type="email" name="_replyto" placeholder="Email" required/><span>*</span>
                         </div>
@@ -187,6 +189,7 @@
                 <a class="footerTitle" href="./donate.html"> Donate </a>
                 <a class="footerLink" href="./donate.html#whyDonate">Why Donate?</a>
                 <a class="footerLink" href="./donate.html#eligible">Am I Eligible?</a>
+                <a class="footerLink" href="./donate.html#compensation">Will I be Compensated?</a>
                 <a class="footerLink" href="./donate.html#donorProcess">Donor Process</a>
                 <a class="footerLink" href="./donate.html#testing">Blood Testing</a>
                 <a class="footerLink" href="./donate.html#collection">Collection and Storage</a>
@@ -202,9 +205,7 @@
         </div>
     </div>       
     
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,400i|Raleway:400,700" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Gaegu|Wendy+One|Open+Sans:300, 300b" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,400i|Raleway:400,700|Dancing+Script:400,700|Open+Sans:300" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"
             integrity="sha384-R4/ztc4ZlRqWjqIuvf6RX5yb/v90qNGx6fS48N0tRxiGkqveZETq72KgDVJCp2TC
                         sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw="
@@ -212,7 +213,6 @@
     </script>
  
     <script  src="./js/animation.js"></script>
-
-
+    <script  src="./js/forms.js"></script>
 </body>
 </html>

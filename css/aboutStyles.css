@@ -7,6 +7,13 @@
 .aboutContainer h2.pageTitle, .aboutContainer .aboutContent .snippet .quote {
   font-size: 35pt; }
 
+.fontFine {
+  font-size: 8pt; }
+
+@media only screen and (max-width: 900px) {
+  .aboutContainer h2.pageTitle, .aboutContainer .aboutContent .snippet .quote {
+    font-size: 28pt; } }
+
 /* adjust fonts */
 @media only screen and (max-width: 620px) {
   .aboutContainer {
@@ -17,10 +24,15 @@
     font-size: 10vw; }
   .aboutContainer {
     font-size: 3.5vw; }
+  .fontFine {
+    font-size: 6pt; }
   .aboutContainer .aboutContent .snippet {
     font-size: 5.5vw; }
   .aboutContainer .aboutContent .large {
     font-size: 11vw; } }
+
+#content {
+  opacity: 1; }
 
 body {
   background: #cff1fb; }

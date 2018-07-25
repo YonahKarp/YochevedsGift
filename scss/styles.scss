@@ -15,6 +15,7 @@ html{
     background: whitesmoke;
 }
 
+
 .right{
     float: right;
     margin-left: 15px;
@@ -49,45 +50,8 @@ body {margin:0;}
     top: -220px;
 }
 
-.blur{
-    transition: opacity 1s ease-in-out;
-
-    height: 100%;
-    width: 100%;
-    background: rgba(17, 17, 17, 0.5);
-    z-index: -1; 
-}
-
-#blur1{
-    background: url("../img/slide1.jpg") center center no-repeat;
-    background-size: cover;
-    position: absolute;
-
-    left:0px;top:0px;bottom:0px
-}
-
-#blur2{
-    opacity: 0;
-}
-
-#page-select{
-    position: absolute;
-    right: 5%;
-    top: 36%;
-    z-index: 10;
-
-    .select{
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 15px 0;
-        border: 0.1px solid white;
-
-        &.active{
-            background-color: $colorBlue;
-            border: 1px solid $colorBlue;
-        }
-    }
+.clearFix{
+    clear: both;
 }
 
 .button.cta{
@@ -100,112 +64,6 @@ body {margin:0;}
     text-decoration: unset;
     cursor: pointer;
     color: $colorGrey;
-
-}
-
-.table{display: table;}
-.table-cell{display: table-cell}
-
-.homeContent{
-    color: $colorGrey;
-    font-family: 'Raleway', Arial, sans-serif;
-
-    .table-cell{
-        vertical-align: middle;
-    }
-
-    .text{
-        @extend %fontMore;
-        background: $colorPurple;
-        width: calc(60% - 35px);
-        box-shadow: 10px 10px 5px rgba(17, 17, 17, 0.5);
-        display: inline-table;
-        vertical-align: top;
-        box-sizing: border-box;
-
-        margin: 30px 15px 30px 20px;
-        //padding: 60px 10% 60px 10%;
-        padding: 0 5%;
-
-        min-height: 410px;
-
-        position: relative;
-
-        span{
-
-            width: 90%;
-            display: table-cell;
-            vertical-align: middle;            
-        }
-    }
-
-    .callout{
-        background: $colorBlue;
-        width: calc(40% - 35px);
-        box-shadow: 10px 10px 5px rgba(17, 17, 17, 0.5);
-
-        display: inline-block;
-        box-sizing: border-box;
-        margin: 30px 20px 30px 15px;
-        min-height: 410px;
-
-
-        div{
-            padding: 30px 7% 30px 7%;
-            background: $colorPink;
-        }
-
-        .finePrint{
-            @extend %fontFine;
-            font-style: italic;
-            padding: 5px 7% 30px 7%;
-
-        }
-    }
-}
-
-@media only screen and (max-width: 740px) {
-    .homeContent .text, .homeContent .callout{
-        width: 90%;
-        display: table;
-        margin: 30px auto;
-
-        min-height: 10px;
-
-    }
-    .homeContent .text{
-        min-height: 350px;
-
-    }
-}
-
-@media only screen and (max-width: 450px) {
-
-    #header .slideContent{
-        min-height: 85vw;
-    }
-
-    .btn-box{
-        font-size: 8pt;
-    }
-
-    // #header .slideContent h2{
-    //     font-size: 10vw;
-    // }
-    
-}
-
-@-webkit-keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
-}  
-@keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
-}
-
-.clearFix{
-    clear: both;
 }
 
 /* fonts */
@@ -226,8 +84,23 @@ body {margin:0;}
     font-family: 'Dancing Script', cursive;
 }
 
-.gaegu{
-    font-family: 'Gaegu', cursive;
+#alertLayer{
+    position: fixed;
+    display: none;
+    z-index: 102;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+
+    background: rgba(17, 17, 17, 0.8);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+
+    &.show{
+        display: inline-block;
+    }
 }
 
 

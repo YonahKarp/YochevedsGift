@@ -11,7 +11,6 @@
 
 </head>
 <body>
-
     <div id="header" class="header2">
         <div class="links">
             <ul>
@@ -22,7 +21,7 @@
                     <a class="unStyle" href ="#contact" >Contact Us</a></li>
             </ul>
 
-            <div class="menu">
+            <div id="menu">
                 <span class="l1"></span>
                 <span class="l2"></span>
                 <span class="l3"></span>
@@ -36,22 +35,19 @@
         <div class="aboutContent openSans">
             <div class="card">
 
-                <div class="imgFull" style=" background: url('./img/sleepingPreemie.jpeg') center center/cover"></div>           
+                <div class="imgFull" style="background: url('./img/logoSmall.png') center center/contain no-repeat;"></div>
                 <span id="OurStory" class="anchor"></span>
                 <h2 class="dancingScript">OUR STORY</h2> 
-
-                <!-- <p class="dancingScript">dancing Script</p>
-                <p class="gaegu">gaegu</p> -->
 
 
                 <div class="">
                     <p>
                         <span class="large">W</span>e began with a plan to provide kosher breast milk for observant parents of preemies.
                         Although by strict Jewish law these babies can use pasteurized human milk from any milk bank,
-                        if possible milk from a Jewish woman should be used (Shulchan Aruch Yoreh Deah 81:7).
+                        if possible milk from a Jewish woman should be used (<i>Shulchan Aruch Yoreh Deah 81:7</i>).
                         Some will recall the story in the beginning of Shemos/Exodus: When Pharaoh’s daughter found Moshe in the river,
-                        she passed him to numerous Egyptian wet nurses, but Moshe refused to latch (see Rashi 2:7).
-                        Miriam, Moshe’s sister, ultimately brought a Jewish wet nurse –Yocheved, Moshe’s mother.
+                        she passed him to numerous Egyptian wet nurses, but Moshe refused to latch (<i>see Rashi 2:7</i>).
+                        Miriam, Moshe’s sister, ultimately brought a Jewish wet nurse – Yocheved, Moshe’s mother.
                     </p>
                     <p>
                         With good intentions, some observant parents will use kosher unpasteurized milk from a relative or family friend.
@@ -72,7 +68,7 @@
 
 
                     <p>
-                        <span class="large">W</span>hat happens when mom wants to nurse, but for some reason she can’t?
+                        <span class="large">W</span>hat happens when mother wants to nurse, but for some reason she can’t?
                         There are milk banks around the US that provide safe human milk.
                         Understandably, they prioritize fragile over healthy babies.
                         So moms are forced to look elsewhere for milk.
@@ -109,7 +105,7 @@
                     <p>
                         <span class="large">T</span>o combat this, Yocheved’s Gift was established to collect, test,
                         pasteurize and disburse donor breast milk to babies across the country.
-                        We have been in touch with the 
+                        We are in touch with the 
                         <a class="colorLink" href="https://www.hmbana.org/">
                             Human Milk Banking Association of North America 
                         </a>(HMBANA)
@@ -123,8 +119,7 @@
                 <span id="WhoWeAre" class="anchor"></span>
 
                 <h2 class="dancingScript marginTop">WHO WE ARE</h2> 
-                <div class="imgFull" style="background: url('./img/logoSmall.png') center center/contain no-repeat;"></div>
-
+                <div class="imgFull" style=" background: url('./img/sleepingPreemie.jpeg') center center/cover"></div>           
                 <p>
                     <span class="large">S</span>ury Weinstock MS, Ed. – As a Special Education therapist working in Early Childhood
                     (Birth -3 years), Sury is in a unique position to understand the effects of
@@ -162,6 +157,9 @@
         </div>
     </div> 
 
+    <div id="alertLayer"></div>
+
+
     <div id="contact"></div>
     <div id="footer">
         <div id="contactUs">
@@ -169,7 +167,9 @@
             <div class="contactFormContainer">
                 <div class="form">
                     <!-- <form action="https://formspree.io/Eli@ceAhead.com" method="POST"> -->
-                    <form action="#" method="POST">
+                    <form action="https://formspree.io/Eli@ceAhead.com" method="POST">
+                        <input type="hidden" name="_next" value="#thankyou" />
+
                         <div>          
                             <input type="email" name="_replyto" placeholder="Email" required/><span>*</span>
                         </div>
@@ -200,6 +200,7 @@
                 <a class="footerTitle" href="./donate.html"> Donate </a>
                 <a class="footerLink" href="./donate.html#whyDonate">Why Donate?</a>
                 <a class="footerLink" href="./donate.html#eligible">Am I Eligible?</a>
+                <a class="footerLink" href="./donate.html#compensation">Will I be Compensated?</a>
                 <a class="footerLink" href="./donate.html#donorProcess">Donor Process</a>
                 <a class="footerLink" href="./donate.html#testing">Blood Testing</a>
                 <a class="footerLink" href="./donate.html#collection">Collection and Storage</a>
@@ -215,16 +216,10 @@
         </div>
     </div>       
     
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,400i|Raleway:400,700" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Gaegu|Wendy+One|Open+Sans:300" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"
-            integrity="sha384-R4/ztc4ZlRqWjqIuvf6RX5yb/v90qNGx6fS48N0tRxiGkqveZETq72KgDVJCp2TC
-                        sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw="
-            crossorigin="anonymous">
-    </script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,400i|Raleway:400,700|Dancing+Script:400,700|Open+Sans:300" rel="stylesheet">
  
     <script  src="./js/animation.js"></script>
+    <script src="./js/about.js"></script>
 
 </body>
 </html>

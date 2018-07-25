@@ -24,7 +24,7 @@
                     <a class="unStyle" href ="#contact" >Contact Us</a></li>
             </ul>
 
-            <div class="menu">
+            <div id="menu">
                 <span class="l1"></span>
                 <span class="l2"></span>
                 <span class="l3"></span>
@@ -39,7 +39,7 @@
             <div class="card">
                 <p class="">
                     If you believe you might be eligible to become a milk donor, please fill out this short form.
-                    We will review your answers and contact you within a few days
+                    We will contact you within a few days
                     with information on the next steps in the donor screening process.  
                 </p>
                 <p>
@@ -54,7 +54,10 @@
                 </p>
             </div>
 
-            <form id="applyForm" action="#" method="POST">
+            <form id="applyForm" action="https://formspree.io/Eli@ceAhead.com" method="POST">
+                <input type="hidden" name="_next" value="#thankyou" />
+                <input type="hidden" name="_subject" value="I would like to donate milk to Yocheved's Gift" />
+
                 <div id="accord">     
                     <div class="item">
                         <h2><span>Contact Info</span></h2>
@@ -96,10 +99,10 @@
                         </div>
                     </div>
                     <div class="item collapse">
-                        <h2><span>Health Info</span></h2>
+                        <h2><span>Milk Info</span></h2>
                         <div class="accordSlideContent">
                             <div class="form">
-                                <h3>Health Info</h3>
+                                <h3>Milk Info</h3>
                                 <div class="inputContainer">
                                     <input type="date" name="babyBirthDate" required data-page="1"/>
                                     <div class="floating-label">Date of Baby’s Birth</div>
@@ -110,7 +113,7 @@
                                         </p>
                                         <div>
                                             <input type="radio" name="hasMilk" value = "yes" required data-page="1">
-                                            <label for="hasMilk">yes</label>
+                                            <label for="hasMilk">Yes</label>
                                             <div class="inputContainer hiddenField">
                                                 <input type="number" name="quantity">
                                                 <div class="floating-label">quantity (oz)</div>
@@ -120,7 +123,7 @@
                                     <div>
                                         <input type="radio" name="hasMilk" id="noMilk" required>
                                         <label>
-                                            no
+                                            No
                                         </label>
                                     </div>
                                 </div>
@@ -172,15 +175,43 @@
                                 <div>
                                     <input type="radio" name="donorType" value="donorComp" required data-page="2">
                                     <label>
-                                        providing milk to be sold for which you will be compensated
+                                        Providing milk to be sold for which I would like to be compensated
                                     </label>
                                 </div>
                                 <div>
                                     <input type="radio" name="donorType" value="donorHMBNA">
                                     <label>
-                                        sick infants, where you can’t be compensated as per HMBANA regulations?
+                                        Sick infants, for which I cannot be compensated as per HMBANA regulations
+                                        <i class="fontFine">For more information on compensation, please <a href="./donate.html#compensation">click here</a></i>
+
                                     </label>
                                 </div>
+
+                                <div>
+                                    <p>How did you hear about Yocheved’s Gift?</p>
+                                    <select id="referer" required>
+                                        <option>Hospital</option>
+                                        <option>Primary Health Care Provider</option>
+                                        <option>Lactation Consultant at a hospital</option>
+                                        <option>Lactation Consultant – Independent</option>
+                                        <option>Internet Search</option>
+                                        <option>Social Media</option>
+                                        <option class="specify">Saw an ad (please specify – where?)</option>
+                                        <option>Referred by milk recipient</option>
+                                        <option>Referred by milk donor</option>
+                                        <option>Referred by friend/family</option>
+                                        <option>Event</option>
+                                        <option>Referred by another milk bank</option>
+                                        <option>My child was a recipient</option>
+                                        <option class="specify">Other (please specify)</option>
+                                        <div> hello</div>
+                                    </select>
+                                </div>
+                                 
+                                <textarea id="specify" class="hide" type="text" name="specify" placeholder="please specify"></textarea>
+
+                                <p>Additional Comments:</p>
+                                <textarea type="text" name="comment" placeholder="Additional Comments"></textarea>
 
                                 <div class="btnContainer submitBtn">
                                         <div type="submit" class="rplButton">submit</div>
@@ -207,7 +238,8 @@
             <div class="contactFormContainer">
                 <div class="form">
                     <!-- <form action="https://formspree.io/Eli@ceAhead.com" method="POST"> -->
-                    <form action="#" method="POST">
+                    <form action="https://formspree.io/Eli@ceAhead.com" method="POST">
+                        <input type="hidden" name="_next" value="#thankyou" />
                         <div>          
                             <input type="email" name="_replyto" placeholder="Email" required/><span>*</span>
                         </div>
@@ -238,6 +270,7 @@
                 <a class="footerTitle" href="./donate.html"> Donate </a>
                 <a class="footerLink" href="./donate.html#whyDonate">Why Donate?</a>
                 <a class="footerLink" href="./donate.html#eligible">Am I Eligible?</a>
+                <a class="footerLink" href="./donate.html#compensation">Will I be Compensated?</a>
                 <a class="footerLink" href="./donate.html#donorProcess">Donor Process</a>
                 <a class="footerLink" href="./donate.html#testing">Blood Testing</a>
                 <a class="footerLink" href="./donate.html#collection">Collection and Storage</a>
@@ -255,10 +288,8 @@
 
         <div id="alertLayer"></div>
 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,400i|Raleway:400,700|Dancing+Script:400,700|Open+Sans:300" rel="stylesheet">
     
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,400i|Raleway:400,700" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Gaegu|Wendy+One|Open+Sans:300, 300b" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"
             integrity="sha384-R4/ztc4ZlRqWjqIuvf6RX5yb/v90qNGx6fS48N0tRxiGkqveZETq72KgDVJCp2TC
                         sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw="
@@ -266,6 +297,7 @@
     </script>
  
     <script  src="./js/animation.js"></script>
+    <script  src="./js/forms.js"></script>
 
 
 </body>
