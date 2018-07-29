@@ -5,7 +5,7 @@
   font-size: 35pt; }
 
 .fontFine {
-  font-size: 8pt; }
+  font-size: 9pt; }
 
 @media only screen and (max-width: 900px) {
   .formContainer h2.pageTitle {
@@ -22,7 +22,7 @@
   .card p.small, #accord .item .form, .error {
     font-size: 3.5vw; }
   .fontFine {
-    font-size: 6pt; } }
+    font-size: 7pt; } }
 
 #content {
   opacity: 1; }
@@ -144,19 +144,6 @@ body {
 
 .errorMessage.hidden {
   display: none; }
-
-#alertLayer {
-  position: fixed;
-  display: none;
-  z-index: 102;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  background: rgba(17, 17, 17, 0.8);
-  color: white;
-  padding: 15px 25px;
-  border-radius: 5px; }
 
 @media only screen and (max-width: 600px) {
   #accord .item {

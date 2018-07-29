@@ -1,13 +1,11 @@
-var questions = document.getElementsByClassName("card");
-for(var q of questions)
-    q.onclick = function(el){
-        return function(){
-            if(!el.classList.contains("shown")){
-                for(var e of questions)
-                    e.classList.remove("shown")
-                el.classList.add("shown")
-            }else{
-               el.classList.remove("shown");
-            }
-        }   
-    }(q)
+$(document).ready(function(){
+    var questions = $(".card");
+    questions.click(function(){
+        if(!$(this).hasClass("shown")){
+            questions.removeClass("shown")
+            $(this).addClass("shown")
+        }else{
+            $(this).removeClass("shown");
+        }
+    })
+});

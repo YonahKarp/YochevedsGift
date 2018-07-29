@@ -2,7 +2,7 @@
   font-size: 35pt; }
 
 .fontFine {
-  font-size: 8pt; }
+  font-size: 9pt; }
 
 @media only screen and (max-width: 900px) {
   .donateContainer h2.pageTitle {
@@ -13,7 +13,7 @@
   .donateContainer h2.pageTitle {
     font-size: 10vw; }
   .fontFine {
-    font-size: 6pt; } }
+    font-size: 7pt; } }
 
 #content {
   opacity: 1; }
@@ -25,11 +25,12 @@ body {
   position: absolute;
   right: 5%;
   font-size: 15pt;
+  font-weight: 600;
   display: inline;
   background: #ffb7b7;
   z-index: 100;
   box-shadow: 10px 10px 5px rgba(17, 17, 17, 0.5);
-  padding: 20px; }
+  padding: 20px 25px; }
   #donateNow.fixed {
     position: fixed;
     bottom: 50px;

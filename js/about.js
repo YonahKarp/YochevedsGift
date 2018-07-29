@@ -1,25 +1,27 @@
-//about and process
-var pars = document.getElementsByTagName("p"),
-lastTime = new Date().getTime();
+$(document).ready(function(){
 
-for(var p of pars)
-    p.classList.add("beforeAnimated")
+    //about and process
+    var pars = $("p"),
+    lastTime = new Date().getTime();
 
-setTimeout(checkForAnimation(pars),1)
+    pars.addClass("beforeAnimated")
 
-// if(location.hash)
-//     $(location.hash).parentNode.classList.remove('beforeAnimated');
+    setTimeout(checkForAnimation(pars),1)
 
-window.onscroll = function(){
-    var newTime = new Date().getTime()
-    if(lastTime+150 < newTime){
-        lastTime = newTime;
-        checkForAnimation(pars)
+    $(window).scroll(function(){
+        var newTime = new Date().getTime()
+        if(lastTime+150 < newTime){
+            lastTime = newTime;
+            checkForAnimation(pars)
+        }
+   })
+
+   function checkForAnimation(els){
+        els.each(function(i, e){
+            var position = e.getBoundingClientRect();
+            if(position.y - window.innerHeight < 0){
+                e.classList.remove('beforeAnimated')
+            }
+        });
     }
-}
-
-function checkForAnimation(els){
-    for(var e of els)
-        if(e.getBoundingClientRect().y - window.innerHeight < 0)
-            e.classList.remove('beforeAnimated')   
-}
+});

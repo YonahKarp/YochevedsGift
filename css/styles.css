@@ -12,7 +12,7 @@
   font-size: 10pt; }
 
 .fontFine {
-  font-size: 8pt; }
+  font-size: 9pt; }
 
 @media only screen and (max-width: 900px) {
   .emphasis {
@@ -31,7 +31,7 @@
   #footer .footerContent a.footerLink {
     font-size: 8pt; }
   .fontFine {
-    font-size: 6pt; }
+    font-size: 7pt; }
   #header .links ul li a, html {
     font-size: 5.5vw; } }
 
@@ -117,8 +117,8 @@
   #header .links ul {
     position: fixed;
     display: inline-block;
-    transform: translateX(550px);
-    right: 0;
+    transform: translateX(0);
+    right: -550px;
     margin: 0;
     padding: 0;
     background: rgba(25, 25, 25, 0.9);
@@ -127,7 +127,7 @@
     z-index: 111;
     transition: ease-in-out transform 1s; }
     #header .links ul.open {
-      transform: translateX(0); }
+      transform: translateX(-550px); }
     #header .links ul li {
       width: 100%;
       height: unset; }

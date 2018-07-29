@@ -8,7 +8,7 @@
   font-size: 35pt; }
 
 .fontFine {
-  font-size: 8pt; }
+  font-size: 9pt; }
 
 @media only screen and (max-width: 900px) {
   .aboutContainer h2.pageTitle, .aboutContainer .aboutContent .snippet .quote {
@@ -25,7 +25,7 @@
   .aboutContainer {
     font-size: 3.5vw; }
   .fontFine {
-    font-size: 6pt; }
+    font-size: 7pt; }
   .aboutContainer .aboutContent .snippet {
     font-size: 5.5vw; }
   .aboutContainer .aboutContent .large {

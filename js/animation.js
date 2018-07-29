@@ -1,79 +1,71 @@
+ 
+ $(document).ready(function(){
 
 
-//collapsed links
-var menu = document.getElementById('menu'),
-    links = document.querySelector('.links ul');
+    //collapsed links
+    var menu = $('#menu');
+    var links = $('.links ul');
 
-menu.onclick = function(){
-    if($(this).hasClass('open')){
-        menu.classList.remove('open');
-        links.classList.remove('open')
-    }else{
-        menu.classList.add('open');
-        links.classList.add('open')
-    }
-};
+    menu.click(function(){
+        if($(this).hasClass('open')){
+            menu.removeClass('open');
+            links.removeClass('open');
+        }else{
+            menu.addClass('open');
+            links.addClass('open')
+        }
+    });
 
-var shortcuts = links.getElementsByTagName('a'),
-    contactUs = document.getElementById('contactUs');
-
-
-
-for(var el of shortcuts)
-    el.onclick = function(e){
+    var shortcuts = $('.links li a');
+    shortcuts.click(function(e){
 
         if(e.currentTarget.hash == "#contact"){
             e.preventDefault();
             e.stopPropagation();
 
-            window.scrollTo({
-                top: contactUs.getBoundingClientRect().y,
-                behavior: "smooth"
-            })
-
-            contactUs.classList.add("open");
-            menu.classList.remove('open');
-            links.classList.remove('open')
+            $('html, body').animate({
+                scrollTop: $(e.currentTarget.hash).offset().top
+            },500)
+             $("#contactUs").addClass("open");
+             menu.removeClass('open');
+             links.removeClass('open');
         }
+        
         return true;
+    })
+
+
+    $('.slideOutBtn').click(function(){
+        $("#contactUs").toggleClass("open");
+    })
+
+    $("#contactUs .rplButton").click(function(e){
+
+        var _this = $(this)
+            
+        var form = document.forms[0]; //fix form
+        
+        if(form.checkValidity()){
+            form.submit();
+            showAlertLayer("Thank you, we will get back to you soon", 5000)
+        }else{
+            $('input:invalid, textarea:invalid').addClass("attention");
+        }
+    });
+
+    //alertLayer
+    var alertLayer = $("#alertLayer");
+    function showAlertLayer(message, timeout){
+        
+        alertLayer.text(message).show();
+        setTimeout(function(){
+            alertLayer.fadeOut()
+        },timeout)
     }
 
-//faqs
-
-
-//contact us//
-document.querySelector(".slideOutBtn").onclick = function(e){
-    contactUs.classList.toggle("open");
-};
-
-//$("#contactUs .rplButton").click(function(e){
-contactUs.querySelector("#contactUs .rplButton").onclick = function(e){        
-    var form = contactUs.querySelector("form");
-    
-    if(form.checkValidity()){
-        form.submit();
+    if(location.hash == "#thankyou"){
         showAlertLayer("Thank you, we will get back to you soon", 5000)
-    }else{
-        var attn = contactUs.querySelectorAll('input:invalid, textarea:invalid')
-        for(var e of attn)
-            e.classList.add("attention")
+        location.hash = "";
     }
-}
 
-
-//alertLayer
-var alertLayer = document.getElementById("alertLayer")
-function showAlertLayer(message, timeout){
-    
-    alertLayer.innerText = message;
-    alertLayer.classList.add("show")
-    setTimeout(function(){
-        alertLayer.classList.remove("show");
-    },timeout)
-}
-
-if(location.hash == "#thankyou"){
-    showAlertLayer("Thank you, we will get back to you soon", 5000)
-    location.hash = "";
-
-}
+});

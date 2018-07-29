@@ -1,42 +1,38 @@
-var cards = document.getElementsByClassName("card"),
-    donateNow = document.getElementById("donateNow"),
-    lastTime = new Date().getTime();
+$(document).ready(function(){
 
-for(var e of cards)
-    e.classList.add("beforeAnimated")
+    var cards = $(".donateContent .card"),
+        donateNow = $("#donateNow"),
+        lastTime = new Date().getTime();
 
-setTimeout(checkForAnimation(cards),1)
+    cards.addClass("beforeAnimated");
 
-if(location.hash)
-    document.getElementById(location.hash.substring(1)).parentNode.classList.remove('beforeAnimated');
+    setTimeout(checkForAnimation(cards),1)
 
-window.onscroll = function(){
-
-    var newTime = new Date().getTime()
-    if(lastTime+50 < newTime){
-        lastTime = newTime;
-        console.log("test")
-
-        checkForAnimation(cards)
-
-        if(shouldHideContactUs())
-            donateNow.classList.add("hidden")
-        else
-            donateNow.classList.remove("hidden")
+    if(location.hash)
+        $(location.hash).parent().removeClass('beforeAnimated')
         
-        if(window.scrollY > 130)
-            donateNow.classList.add("fixed")
-        else
-            donateNow.classList.remove("fixed")
+    $(window).scroll(function(){
+        var newTime = new Date().getTime()
+        if(lastTime+150 < newTime){
+            lastTime = newTime;    
+            checkForAnimation(cards)
+        }
+    
+        donateNow.toggleClass("hidden", shouldHideContactUs())
+        donateNow.toggleClass("fixed", window.scrollY > 130)
+    })
+
+  
+    function checkForAnimation(els){
+        els.each(function(i, e){
+            var position = e.getBoundingClientRect();
+            if(position.y - window.innerHeight < 0){
+                e.classList.remove('beforeAnimated')
+            }
+        });
     }
-}
-
-function checkForAnimation(els){
-    for(var e of els)
-        if(e.getBoundingClientRect().y - window.innerHeight < 0)
-            e.classList.remove('beforeAnimated')   
-}
-
-function shouldHideContactUs(){
-    return window.scrollY + window.innerHeight + 100 >= document.body.clientHeight;
-}
+    
+    function shouldHideContactUs(){
+        return $(window).scrollTop() + window.innerHeight + 100 >= $(document).height();
+    }
+});

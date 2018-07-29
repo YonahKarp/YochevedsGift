@@ -2,7 +2,7 @@
   font-size: 35pt; }
 
 .fontFine {
-  font-size: 8pt; }
+  font-size: 9pt; }
 
 @media only screen and (max-width: 900px) {
   .receiveContainer h2.pageTitle {
@@ -13,7 +13,7 @@
   .receiveContainer h2.pageTitle {
     font-size: 10vw; }
   .fontFine {
-    font-size: 6pt; } }
+    font-size: 7pt; } }
 
 #content {
   opacity: 1; }

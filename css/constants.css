@@ -1,7 +1,7 @@
 .fontFine {
-  font-size: 8pt; }
+  font-size: 9pt; }
 
 /* adjust fonts */
 @media only screen and (max-width: 450px) {
   .fontFine {
-    font-size: 6pt; } }
+    font-size: 7pt; } }

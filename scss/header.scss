@@ -113,8 +113,8 @@
             ul{
                 position: fixed;
                 display: inline-block;
-                transform: translateX(550px);
-                right: 0;
+                transform: translateX(0);
+                right: -550px;
                 margin: 0;
                 padding: 0;
                 background: rgba(25, 25,25, 0.9);
@@ -124,7 +124,7 @@
                 transition: ease-in-out transform 1s;
 
                 &.open{
-                    transform: translateX(0);
+                    transform: translateX(-550px);
                 }
 
                 li{

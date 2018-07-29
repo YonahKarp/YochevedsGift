@@ -112,6 +112,7 @@
 .homeContent{
     color: $colorGrey;
     font-family: 'Raleway', Arial, sans-serif;
+    margin-top: 30px;
 
     .table-cell{
         vertical-align: middle;
@@ -120,65 +121,66 @@
     .text{
         @extend %fontMore;
         background: $colorPurple;
-        width: calc(60% - 35px);
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+
         box-shadow: 10px 10px 5px rgba(17, 17, 17, 0.5);
-        display: inline-table;
-        vertical-align: top;
+
         box-sizing: border-box;
-
-        margin: 30px 15px 30px 20px;
-        //padding: 60px 10% 60px 10%;
-        padding: 0 5%;
-
-        min-height: 380px;
-
-        position: relative;
-
-        span{
-
-            width: 90%;
-            display: table-cell;
-            vertical-align: middle;            
+        .innerText{
+            padding: 10%;           
         }
     }
     
     .callout{
         background: $colorBlue;
-        width: calc(40% - 35px);
         box-shadow: 10px 10px 5px rgba(17, 17, 17, 0.5);
+        margin: 0 15px;
 
-        display: inline-block;
-        box-sizing: border-box;
-        margin: 30px 20px 30px 15px;
-        min-height: 380px;
-
-
-        div{
-            padding: 30px 7% 30px 7%;
+        .pink{
+            padding: 30px 10%;
             background: $colorPink;
+        }
+
+        .blue{
+            background: $colorBlue;
+            display: flex;
+            align-items: center;
         }
 
         .finePrint{
             @extend %fontFine;
             font-style: italic;
-            padding: 5px 7% 30px 7%;
+            padding: 7% 10%;
+
 
         }
     }
+
+    &.row {
+        display: flex; /* equal height of the children */
+      }
+      
+      .col {
+        flex: 1; /* additionally, equal width */   
+      }
 }
 
 @media only screen and (max-width: 740px) {
+    .homeContent.row{
+        display: block;
+    }
     .homeContent .text, .homeContent .callout{
         width: 90%;
-        display: table;
         margin: 30px auto;
 
         min-height: 10px;
-
     }
-    .homeContent .text{
-        min-height: 350px;
 
+
+    .homeContent  .blue .finePrint{
+        padding: 25px 10% 30px 10%;
     }
 }
 
