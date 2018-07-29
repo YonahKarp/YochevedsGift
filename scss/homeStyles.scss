@@ -6,10 +6,14 @@
 
 .slideContent{
     width: 91%;
-    min-height: 220px;
+    // min-height: 220px;
     display: none;
     text-align: center;
     opacity: 0;
+
+    position: absolute;
+    left: 3%;
+    bottom: 5%;
 
     &.active{
         opacity: 1;
@@ -19,34 +23,32 @@
     }
 
     > div{
-        display: inline-block;
+        // display: inline-block;
         text-align: left;
     }
 
     .tagLine{
-        position: absolute;
-        top: calc(100px + 6%);
-        left: 6%;
+        // position: absolute;
+        // top: calc(100px + 6%);
+        // left: 6%;
     }
 
     .question{
         @extend %fontStnd;
-        width: 56%;            
+        width: 60%;            
         padding: 8px 0 0 20px;
         vertical-align: top;
         font-style: italic;
 
-        position: absolute;
-        bottom: 15%;
-        right: 6%;
+        // position: absolute;
+        // bottom: 15%;
+        // right: 6%;
     }  
 
     h2{
         @extend %fontH2;
         font-weight: bold;
         margin: 0;
-        // font-family: 'Dancing Script', cursive;
-
         font-family: 'Montserrat', sans-serif;
     }
 }
@@ -57,7 +59,7 @@
 
 @media only screen and (max-width: 740px) {
     .slideContent{
-        min-height: 400px;
+        // min-height: 400px;
         text-align: unset;
         .question{
             width: 94%;
@@ -132,7 +134,7 @@
             padding: 10%;           
         }
     }
-    
+
     .callout{
         background: $colorBlue;
         box-shadow: 10px 10px 5px rgba(17, 17, 17, 0.5);
@@ -187,7 +189,7 @@
 @media only screen and (max-width: 450px) {
 
     #header .slideContent{
-        min-height: 85vw;
+        // min-height: 85vw;
     }
 
     .btn-box{
