@@ -8,7 +8,7 @@
   font-size: 35pt; }
 
 .fontFine, .homeContent .callout .finePrint {
-  font-size: 9pt; }
+  font-size: 10pt; }
 
 @media only screen and (max-width: 900px) {
   .slideContent h2 {
@@ -19,7 +19,7 @@
   .slideContent h2 {
     font-size: 10vw; }
   .fontFine, .homeContent .callout .finePrint {
-    font-size: 7pt; }
+    font-size: 8pt; }
   .slideContent .question {
     font-size: 5.5vw; }
   .homeContent .text {

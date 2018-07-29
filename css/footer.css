@@ -1,0 +1,165 @@
+@charset "UTF-8";
+#footer .footerContent a.footerTitle, .form .floating-label {
+  font-size: 15pt; }
+
+#footer .footerContent a.footerLink {
+  font-size: 10pt; }
+
+.fontFine {
+  font-size: 10pt; }
+
+/* adjust fonts */
+@media only screen and (max-width: 620px) {
+  #footer .footerContent a.footerTitle, .form .floating-label {
+    font-size: 12pt; } }
+
+@media only screen and (max-width: 450px) {
+  #footer .footerContent a.footerTitle, .form .floating-label {
+    font-size: 3.5vw; }
+  #footer .footerContent a.footerLink {
+    font-size: 8pt; }
+  .fontFine {
+    font-size: 8pt; } }
+
+#footer {
+  background: #373737;
+  min-height: 300px;
+  padding: 15px 5%;
+  margin-top: 15px;
+  position: relative;
+  width: 100%;
+  overflow-x: hidden; }
+  #footer #contactUs {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    transform: translateX(300px);
+    transition: transform .8s ease-in-out; }
+    #footer #contactUs.open {
+      transform: translateX(0px); }
+      #footer #contactUs.open .slideOutBtn:after {
+        transform: rotate(-180deg); }
+    #footer #contactUs .slideOutBtn {
+      position: absolute;
+      right: 300px;
+      transform: rotate(270deg);
+      transform-origin: 100% 100%;
+      white-space: nowrap;
+      background: #b1b1ec;
+      padding: 10px 15px;
+      cursor: pointer; }
+      #footer #contactUs .slideOutBtn:after {
+        content: "▲";
+        display: inline-block;
+        font-size: 15px;
+        padding: 0 5px;
+        transition: transform .2s; }
+    #footer #contactUs .contactFormContainer {
+      position: relative;
+      width: 300px;
+      min-height: 250px;
+      background: #b1b1ec;
+      padding: 15px; }
+  #footer .footerContent {
+    columns: 3 200px;
+    column-gap: 5vw;
+    column-rule: 1px dotted whitesmoke; }
+    #footer .footerContent .column {
+      break-inside: avoid; }
+    #footer .footerContent a {
+      color: white;
+      padding: 10px 0;
+      display: table;
+      width: 175px;
+      text-decoration: none; }
+    #footer .footerContent a.footerTitle {
+      padding-top: 30px;
+      text-transform: uppercase;
+      box-sizing: border-box;
+      border-bottom: 2px solid #b1b1ec; }
+
+.form {
+  font-size: 16px; }
+  .form input:not([type="radio"]):not([type="checkbox"]), .form textarea, .form select {
+    width: 90%;
+    margin: 0 auto 10px;
+    text-indent: 15px;
+    border-bottom: 1px solid #ddd;
+    color: #373737;
+    border-radius: 5px;
+    background: transparent;
+    font: 16px Arial, Helvetica, sans-serif;
+    height: 35px; }
+  .form input[type=radio], .form input[type=checkbox] {
+    margin-bottom: 10px;
+    display: inline-block; }
+    .form input[type=radio]:checked, .form input[type=checkbox]:checked {
+      padding-bottom: 50px; }
+      .form input[type=radio]:checked ~ .hiddenField, .form input[type=checkbox]:checked ~ .hiddenField {
+        max-height: 100px;
+        opacity: 1;
+        pointer-events: unset; }
+      .form input[type=radio]:checked .shownField, .form input[type=checkbox]:checked .shownField {
+        max-height: 0px;
+        opacity: 0;
+        pointer-events: none; }
+  .form .shownField {
+    max-height: 100px;
+    opacity: 1;
+    transition: max-height .7s ease-in-out, opacity .7s ease-in-out; }
+  .form .hiddenField {
+    max-height: 0px;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height .7s ease-in-out, opacity .7s ease-in-out; }
+  .form input[type=number]::-webkit-inner-spin-button,
+  .form input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }
+  .form .attention:invalid {
+    background-color: #dd3a3a !important; }
+    .form .attention:invalid ~ .floating-label {
+      background-color: #dd3a3a !important;
+      color: white; }
+    .form .attention:invalid ~ label {
+      color: #dd3a3a !important; }
+  .form input[required] ~ span, .form textarea[required] ~ span {
+    display: none; }
+  .form input[required]:invalid ~ span, .form textarea[required]:invalid ~ span {
+    display: inline;
+    color: #dd3a3a;
+    padding-left: 10px;
+    vertical-align: top; }
+  .form textarea {
+    resize: none;
+    height: 50px; }
+  .form .btnContainer {
+    height: 40px;
+    width: 90%;
+    display: inline-block; }
+  .form .rplButton {
+    color: #373737;
+    background-color: #cff1fb;
+    font-size: 14pt;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer; }
+    .form .rplButton:active {
+      background-color: #d6fbe4; }
+  .form .inputContainer {
+    position: relative;
+    margin-bottom: 5px; }
+  .form input:focus ~ .floating-label,
+  .form input:not(:focus):valid ~ .floating-label {
+    top: -5px;
+    font-size: 10px;
+    opacity: 1;
+    padding: 0 5px; }
+  .form .floating-label {
+    position: absolute;
+    display: inline-block;
+    color: #777;
+    pointer-events: none;
+    left: 20px;
+    top: 7px;
+    transition: 0.2s ease top, 0.2s ease font-size; }

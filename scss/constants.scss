@@ -15,7 +15,7 @@ $colorGrey: rgb(55, 55, 55);
 %fontMore{font-size: 20pt;}
 %fontH2{font-size: 35pt;}
 %fontXSm{font-size: 10pt;}
-%fontFine{font-size: 9pt;}
+%fontFine{font-size: 10pt;}
 
 .fontFine{
     @extend %fontFine;
@@ -37,7 +37,7 @@ $colorGrey: rgb(55, 55, 55);
     %fontSm{font-size: 3.5vw}
 
     %fontXSm{font-size: 8pt;}
-    %fontFine{font-size: 7pt;}
+    %fontFine{font-size: 8pt;}
 
     %fontStnd{font-size: 5.5vw}
     %fontDblStnd{font-size: 11vw}

@@ -5,7 +5,7 @@
   font-size: 35pt; }
 
 .fontFine {
-  font-size: 9pt; }
+  font-size: 10pt; }
 
 @media only screen and (max-width: 900px) {
   .formContainer h2.pageTitle {
@@ -22,7 +22,7 @@
   .card p.small, #accord .item .form, .error {
     font-size: 3.5vw; }
   .fontFine {
-    font-size: 7pt; } }
+    font-size: 8pt; } }
 
 #content {
   opacity: 1; }
