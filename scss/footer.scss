@@ -211,6 +211,11 @@
         padding: 0 5px;
     }
 
+    input:not([required])::placeholder{
+        font-weight: 400;
+        font-family: 'Open Sans', sans-serif;
+    }
+
     .floating-label {
         position: absolute;
         display: inline-block;

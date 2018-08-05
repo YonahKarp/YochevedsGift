@@ -52,6 +52,10 @@ body {
   padding: 15px 30px;
   background: white; }
 
+#applyForm.success {
+  text-align: center;
+  margin-top: 15px; }
+
 #accord {
   position: relative;
   flex-basis: auto;
@@ -92,11 +96,15 @@ body {
     #accord .item.attention .shortMargins p {
       margin: 2px 0; }
     #accord .item .form {
-      width: calc(90vw - 160px); }
+      width: calc(90vw - 180px); }
       #accord .item .form .btnContainer {
         width: 45%;
         float: right;
         margin-right: 10%; }
+      #accord .item .form .submitBtn[disabled] .rplButton {
+        opacity: 0.7; }
+        #accord .item .form .submitBtn[disabled] .rplButton:active {
+          background-color: #ffdbdb; }
       #accord .item .form .submitBtn .rplButton {
         background-color: #ffdbdb; }
         #accord .item .form .submitBtn .rplButton:active {

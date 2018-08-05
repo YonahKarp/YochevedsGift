@@ -42,6 +42,11 @@ body{
     }
 }
 
+#applyForm.success{
+    text-align: center;
+    margin-top: 15px;    
+}
+
 
 $accordHeight: 550px;
 #accord{
@@ -106,7 +111,7 @@ $accordHeight: 550px;
 
 
         .form{
-            width: calc(90vw - 160px); //width of container - width of all tabs
+            width: calc(90vw - 180px); //width of container - width of all tabs
             @extend %fontSm;
         
             .btnContainer{
@@ -115,11 +120,20 @@ $accordHeight: 550px;
                 margin-right: 10%;
             }
 
-            .submitBtn .rplButton{
-                background-color: $colorPink;
+            .submitBtn{
+                &[disabled] .rplButton{
+                    opacity: 0.7;
+                    &:active{
+                        background-color: $colorPink;
+                    }
+                }
 
-                &:active{
-                    background-color: $colorPurple;
+                .rplButton{
+                    background-color: $colorPink;
+
+                    &:active{
+                        background-color: $colorPurple;
+                    }
                 }
             }
         }

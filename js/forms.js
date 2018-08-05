@@ -41,7 +41,10 @@ $(document).ready(function(){
             $(".item .errorMessage").addClass("hidden");
             errors.addClass("hidden")
             showAlertLayer("Thank you, we will get back to you soon", 5000)
-            //form.submit();
+            form.submit();
+            $(this).text("Thank You");
+            $("#applyForm").html("<div class='card'>Form Submitted</div>").addClass("success")
+            window.scrollTo(0,0);
         }else{
 
             $(".item .errorMessage").removeClass("hidden");
@@ -63,6 +66,16 @@ $(document).ready(function(){
     function turnToPage(index){
         item.addClass("collapse");
         item[index].classList.remove("collapse");
+    }
+
+    //alertLayer
+    var alertLayer = $("#alertLayer");
+    function showAlertLayer(message, timeout){
+        
+        alertLayer.text(message).show();
+        setTimeout(function(){
+            alertLayer.fadeOut()
+        },timeout)
     }
 
 

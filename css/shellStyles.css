@@ -358,6 +358,9 @@
     font-size: 10px;
     opacity: 1;
     padding: 0 5px; }
+  .form input:not([required])::placeholder {
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif; }
   .form .floating-label {
     position: absolute;
     display: inline-block;
@@ -740,6 +743,9 @@ body {
     font-size: 10px;
     opacity: 1;
     padding: 0 5px; }
+  .form input:not([required])::placeholder {
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif; }
   .form .floating-label {
     position: absolute;
     display: inline-block;
