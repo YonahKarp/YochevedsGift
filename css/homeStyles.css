@@ -8,7 +8,7 @@
   font-size: 35pt; }
 
 .fontFine, .homeContent .callout .finePrint {
-  font-size: 10pt; }
+  font-size: 11pt; }
 
 @media only screen and (max-width: 900px) {
   .slideContent h2 {
@@ -19,7 +19,7 @@
   .slideContent h2 {
     font-size: 10vw; }
   .fontFine, .homeContent .callout .finePrint {
-    font-size: 8pt; }
+    font-size: 9pt; }
   .slideContent .question {
     font-size: 5.5vw; }
   .homeContent .text {
@@ -71,7 +71,7 @@
   z-index: -1; }
 
 #blur1 {
-  background: url("../img/slide1.jpg") center center no-repeat;
+  background: url("../img/slide1.jpg") center 10% no-repeat;
   background-size: cover;
   position: absolute;
   left: 0px;
@@ -130,7 +130,7 @@
       align-items: center; }
     .homeContent .callout .finePrint {
       font-style: italic;
-      padding: 7% 10%; }
+      padding: 15px 10% 30px; }
   .homeContent.row {
     display: flex;
     /* equal height of the children */ }
@@ -146,7 +146,7 @@
     margin: 30px auto;
     min-height: 10px; }
   .homeContent .blue .finePrint {
-    padding: 25px 10% 30px 10%; } }
+    padding: 15px 10% 30px 10%; } }
 
 @media only screen and (max-width: 450px) {
   .btn-box {

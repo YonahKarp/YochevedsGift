@@ -19,10 +19,10 @@ $(document).ready(function(){
 
         if(flag){
             blur2.css("opacity", 1);
-            blur2.css({"background": "url(./img/slide"+index+".jpg) center center no-repeat", "background-size" : "cover", "position":"absolute"});
+            blur2.css({"background": "url(./img/slide"+index+".jpg) center 10% no-repeat", "background-size" : "cover", "position":"absolute"});
         }else{
             blur2.css("opacity", 0);
-            blur1.css({"background": "url(./img/slide"+index+".jpg) center center no-repeat", "background-size" : "cover", "position":"absolute"});
+            blur1.css({"background": "url(./img/slide"+index+".jpg) center 10% no-repeat", "background-size" : "cover", "position":"absolute"});
         }
         flag = !flag;
     } 

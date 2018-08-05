@@ -77,7 +77,7 @@
 }
 
 #blur1{
-    background: url("../img/slide1.jpg") center center no-repeat;
+    background: url("../img/slide1.jpg") center 10% no-repeat;
     background-size: cover;
     position: absolute;
 
@@ -154,7 +154,7 @@
         .finePrint{
             @extend %fontFine;
             font-style: italic;
-            padding: 7% 10%;
+            padding: 15px 10% 30px;
 
 
         }
@@ -182,7 +182,7 @@
 
 
     .homeContent  .blue .finePrint{
-        padding: 25px 10% 30px 10%;
+        padding: 15px 10% 30px 10%;
     }
 }
 
