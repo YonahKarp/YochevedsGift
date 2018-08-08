@@ -388,6 +388,12 @@ html {
   float: left;
   margin-right: 15px; }
 
+.table {
+  display: table; }
+
+.table-cell {
+  display: table-cell; }
+
 .centerTxt {
   text-align: center; }
 

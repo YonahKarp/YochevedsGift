@@ -30,6 +30,9 @@
 body {
   background: #ffdbdb; }
 
+.padleftTop {
+  padding: 10px 0 0 5px; }
+
 .hide {
   display: none; }
 
