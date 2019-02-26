@@ -3,40 +3,13 @@
 <head>
   <title>Yocheved's Gift: Request Supplies</title>
    
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135261918-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'UA-135261918-1');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="icon" type="image/png" href="./icon.png">
+    @include head.incl
   <link rel="stylesheet" href="./css/formStyles.css">
 </head>
 <body>
 
     <div id="header" class="header2">
-        <div class="links">
-            <ul>
-                <li><a class="unStyle" href ="./about.html">About Us</a></li><li>
-                    <a class="unStyle" href ="./donate.html">Donate</a></li><li>
-                    <a class="unStyle" href ="./faqs.html">FAQs</a></li><li>
-                    <a class="unStyle" href ="./receive.html">Receive Milk</a></li><li>
-                    <a class="unStyle" href ="#contact" >Contact Us</a></li>
-            </ul>
-        
-            <div id="menu">
-                <span class="l1"></span>
-                <span class="l2"></span>
-                <span class="l3"></span>
-            </div>
-        </div>
-        <a href="./index.html"><img class="logo" src = "./img/logo.png" alt="Yocheved's Gift logo"/></a>
+        @include header.incl
     </div>
     <div class="formContainer">
         <h2 class="pageTitle dancingScript">Request Supplies</h2>
@@ -156,62 +129,7 @@
         </div>
     </div> 
 
-    <div id="contact"></div>
-    <div id="footer">
-        <div id="contactUs">
-            <div class="slideOutBtn">Contact Us</div>
-            <div class="contactFormContainer">
-                <div class="form">
-                    <!-- <form action="https://formspree.io/Eli@ceAhead.com" method="POST"> -->
-                    <form action="https://formspree.io/Eli@ceAhead.com" method="POST">
-                        <input type="hidden" name="_next" value="#thankyou" />
-                        <div>          
-                            <input type="email" name="_replyto" placeholder="Email" required/><span>*</span>
-                        </div>
-                        <div>
-                            <input type="text" name="name" placeholder="Full Name" required /><span>*</span>
-                        </div>
-                        <input type="number" name="phone" placeholder="Phone" maxlength="20"/>                        
-                        <textarea name="message" placeholder="Message" required></textarea><span>*</span>
-                        <!-- <input type="hidden" name="_next" value="#" /> -->
-                        <input type="hidden" name="_subject" value="I want to learn more about Yocheved's Gift" />
-                        <div class="btnContainer">
-                                <div class="rplButton">Send</div>
-                                <div class ="rplCircle"></div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="footerContent ">
-            <div class="column">
-                <a class="footerTitle" href="./index.html"> Home </a>
-            
-                <a class="footerTitle" href="./about.html"> About </a>
-                <a class="footerLink" href="./about.html#OurStory">Our Story</a>
-                <a class="footerLink" href="./about.html#WhoWeAre">Who We Are</a>
-            </div>
-            <div class="column">
-                <a class="footerTitle" href="./donate.html"> Donate </a>
-                <a class="footerLink" href="./donate.html#whyDonate">Why Donate?</a>
-                <a class="footerLink" href="./donate.html#eligible">Am I Eligible?</a>
-                <a class="footerLink" href="./donate.html#compensation">Will I be Compensated?</a>
-                <a class="footerLink" href="./donate.html#donorProcess">Donor Process</a>
-                <a class="footerLink" href="./donate.html#testing">Blood Testing</a>
-                <a class="footerLink" href="./donate.html#collection">Collection and Storage</a>
-                <a class="footerLink" href="./donate.html#request">Request Supplies</a>
-            </div>
-            <div class="column">
-                <a class="footerTitle" href="./faqs.html"> FAQs </a>
-                <a class="footerTitle" href="./receive.html"> Receive Milk </a>
-                <a class="footerTitle"> Forms </a>
-                <a class="footerLink" href="./donateNow.html">Donate Now!</a>
-                <a class="footerLink" href="./requestForm.html">Request more Supplies</a>
-            </div>
-        </div>
-    </div>       
-    
-    <div id="alertLayer"></div>
+    @include footer.incl
     
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,400i|Raleway:400,700|Dancing+Script:400,700|Open+Sans:300" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"

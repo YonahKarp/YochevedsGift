@@ -1,0 +1,16 @@
+<div class="links">
+    <ul>
+        <li><a class="unStyle" href ="./about.html">About Us</a></li><li>
+            <a class="unStyle" href ="./donate.html">Donate</a></li><li>
+            <a class="unStyle" href ="./faqs.html">FAQs</a></li><li>
+            <a class="unStyle" href ="./receive.html">Receive Milk</a></li><li>
+            <a class="unStyle" href ="#contact" >Contact Us</a></li>
+    </ul>
+
+    <div id="menu">
+        <span class="l1"></span>
+        <span class="l2"></span>
+        <span class="l3"></span>
+    </div>
+</div>
+<a href="./index.html"><img class="logo" src = "./img/logo.png" alt="Yocheved's Gift logo"/></a>
